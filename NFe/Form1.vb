@@ -1,7 +1,7 @@
 ﻿Imports System.Xml
 Imports System.Text
 Imports System.Security.Cryptography.X509Certificates
-Imports NFe.NFe
+Imports NFe
 
 Public Class Form1
 
@@ -9,12 +9,12 @@ Public Class Form1
     Private servico As New NFeStatusServico.NfeStatusServico2SoapClient
     Private resposta As New NFeStatusServico.nfeStatusServicoNF2Response
     Private arquivoRequisicao As New XmlDocument
-    Private documentoRequisicao As New NFe.TConsStatServ
+    Private documentoRequisicao As New TConsStatServ
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        documentoRequisicao.versao = NFe.Versao.V_3_10
-        documentoRequisicao.tpAmb = NFe.TAmb.TESTE
+        documentoRequisicao.versao = "3.10"
+        documentoRequisicao.tpAmb = NFe.TAmb.Item2
         documentoRequisicao.cUF = NFe.TCodUfIBGE.Item33
         documentoRequisicao.xServ = NFe.TConsStatServXServ.STATUS
         

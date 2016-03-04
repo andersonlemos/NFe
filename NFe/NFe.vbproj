@@ -79,8 +79,9 @@
     <Compile Include="certificados.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ConsultaManifestacaoReq.vb" />
     <Compile Include="ConsultaStatusDoServico.vb" />
+    <Compile Include="Entities\consStatServ_v3_10.vb" />
+    <Compile Include="Entities\nfe_v3_10.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +111,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RetornoConsultaStatusDoServico.vb" />
-    <Compile Include="Entities\consStatServ.vb" />
-    <Compile Include="Entities\retConsStatServ.vb" />
-    <Compile Include="Entities\leiauteNFe_v3.10.designer.vb" />
     <Compile Include="Sefaz.vb" />
     <Compile Include="Service References\NFeConsultaDest\Reference.vb">
       <AutoGen>True</AutoGen>
@@ -341,6 +339,7 @@
   <ItemGroup>
     <None Include="Service References\NFeStatusServico\NfeStatusServico21.disco" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

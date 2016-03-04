@@ -236,4 +236,5 @@ _Pvt_Extensions
 .fake/
 
 #Documents Settings
-[Dd]ocumentos/
+#[Dd]ocumentos/
+*.vb

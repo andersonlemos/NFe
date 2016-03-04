@@ -33,8 +33,12 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Certificado.cs" />
+    <Compile Include="Entities\StatusDoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +46,10 @@
       <Project>{9840841d-c182-42f3-bcfa-be2b6c3fe001}</Project>
       <Name>NFe.Helpers</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IRepositories\" />
+    <Folder Include="ValueObjects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
