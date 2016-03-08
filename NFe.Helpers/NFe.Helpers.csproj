@@ -33,11 +33,20 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Guard.cs" />
+    <Compile Include="Interfaces\IDeserializeOperation.cs" />
+    <Compile Include="Interfaces\IDocumentOperation.cs" />
+    <Compile Include="Interfaces\ISerializeOperation.cs" />
+    <Compile Include="Services\DeserializeDocument.cs" />
+    <Compile Include="Services\DocumentNFe.cs" />
+    <Compile Include="Services\Guard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\SerializeDocument.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

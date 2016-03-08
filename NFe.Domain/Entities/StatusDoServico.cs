@@ -8,18 +8,22 @@ namespace NFe.Domain.Entities
     {
       
       [XmlAttribute(AttributeName="versao")]
-      public string versao { get; private set; }
+      public string versao { get; set; }
 
       [XmlElementAttribute("tpAmb")]
-      public string tpAmb { get; private set; }
+      public string tpAmb { get; set; }
 
       [XmlElementAttribute("cUF")]
-      public string cUF { get; private set; }
+      public string cUF { get; set; }
 
       [XmlElementAttribute("xServ")]
-      public string xServ { get; private set; }
+      public string xServ { get; set; }
 
-      public StatusDoServico(string versao, string ambiente, string uf, string serv)
+      public StatusDoServico()
+      {
+      }
+        
+       public StatusDoServico(string versao, string ambiente, string uf, string serv)
       {
         this.versao = versao;
         this.tpAmb = ambiente;
