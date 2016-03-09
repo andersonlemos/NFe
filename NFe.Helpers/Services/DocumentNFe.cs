@@ -3,10 +3,10 @@ using NFe.Helpers.Interfaces;
 
 namespace NFe.Helpers
 {
-    public class DocumentNFe<T>where T:class , IDocumentOperation<T>
+    public class DocumentNFe<T> where T : class 
     {
       private object _document;
-      
+  
       public DocumentNFe()
       {
       }
@@ -24,43 +24,17 @@ namespace NFe.Helpers
 
       public virtual T Deserialize()
       {
-        return new DeserializeDocument<T>(this._document).Deserialize();
+        T obj= null;
+        return  obj;
+        //return new DeserializeDocument<T>(this._document).Deserizalize();
+
       }
 
-
-      public virtual bool SaveToFile(string fileName, ref System.Exception exception)
+      public virtual void SaveAS(object obj,string fileName)
       {
-          exception = null;
-          try
-          {
-              SaveToFile(fileName);
-              return true;
-          }
-          catch (System.Exception e)
-          {
-              exception = e;
-              return false;
-          }
-      }
+        var file = new SaveDocument(obj, fileName);
 
-      public virtual void SaveToFile(string fileName)
-      {
-          System.IO.StreamWriter streamWriter = null;
-          try
-          {
-              string xmlString = Serialize();
-              System.IO.FileInfo xmlFile = new System.IO.FileInfo(fileName);
-              streamWriter = xmlFile.CreateText();
-              streamWriter.WriteLine(xmlString);
-              streamWriter.Close();
-          }
-          finally
-          {
-              if ((((streamWriter) != null)))
-              {
-                  streamWriter.Dispose();
-              }
-          }
+        file.SaveToFile(new System.Exception("Erro no Salvamento"));
       }
 
       //public static bool LoadFromFile(string fileName, T obj, System.Exception exception)

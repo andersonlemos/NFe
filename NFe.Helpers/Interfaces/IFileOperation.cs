@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace NFe.Helpers.Interfaces
 {
-    public interface IDocumentOperation<T> where T:class, IDeserializeOperation, ISerializeOperation
-    {
-
-    }
+   public interface IFileOperation:ISaveOperation
+   {
+      
+   }
 }

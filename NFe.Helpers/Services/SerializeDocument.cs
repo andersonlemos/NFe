@@ -4,7 +4,7 @@ using NFe.Helpers.Interfaces;
 
 namespace NFe.Helpers.Services
 {
-  public class SerializeDocument<T>:ISerializeOperation 
+  public class SerializeDocument<T> : ISerializeOperation 
   {
     private object _document;
     private static XmlSerializer _serializer;

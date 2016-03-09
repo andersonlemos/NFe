@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace NFe.Helpers.Services
 {
-    public class DeserializeDocument<T>:IDeserializeOperation<T>
+    public class DeserializeDocument<T> where T : class, IDeserializeOperation
     {
         private object _document;
         private static XmlSerializer _serializer;
@@ -19,7 +19,7 @@ namespace NFe.Helpers.Services
         }
 
 
-       public DeserializeDocument()
+      public DeserializeDocument()
       {
 
       }
@@ -28,46 +28,29 @@ namespace NFe.Helpers.Services
       {
         this._document = document;
       }
+     
+      public virtual object Deserialize()
+      {
+          System.IO.StringReader stringReader = null;
+          try
+          {
+              stringReader = new System.IO.StringReader((string)this._document);
+             
+              return (T)Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader));
+          }
+          finally
+          {
+              if ((((stringReader) != null)))
+              {
+                  stringReader.Dispose();
+              }
+          }
+      }
 
-      private bool Deserialize(string xml, T obj)
-        {
-            System.Exception exception = null;
+      public virtual T Deserizalize()
+      {
+        return (T)this.Deserialize();
+      }
 
-            return Deserialize(xml, obj, exception);
-        }
-
-        private bool Deserialize(string xml, T obj, Exception exception)
-        {
-            exception = null;
-          
-            try
-            {
-                obj = Deserialize();
-                return true;
-            }
-            catch (System.Exception ex)
-            {
-                exception = ex;
-
-                return false;
-            }
-        }
-
-        public virtual T Deserialize()
-        {
-            System.IO.StringReader stringReader = null;
-            try
-            {
-                stringReader = new System.IO.StringReader((string)this._document);
-                return (T)Serializer.Deserialize(System.Xml.XmlReader.Create(stringReader));
-            }
-            finally
-            {
-                if ((((stringReader) != null)))
-                {
-                    stringReader.Dispose();
-                }
-            }
-        }
     }
 }
