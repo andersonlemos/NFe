@@ -1,9 +1,9 @@
-﻿using System;
-
+﻿
 namespace NFe.Helpers.Interfaces
 {
-    public interface IDeserializeOperation
+    public interface IDeserializeOperation<T> 
     {
-        object Deserialize();
+      bool IsDeserialized();
+      T Deserialize();
     }
 }

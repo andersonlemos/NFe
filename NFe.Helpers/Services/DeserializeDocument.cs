@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 
 namespace NFe.Helpers.Services
 {
-    public class DeserializeDocument<T> where T : class, IDeserializeOperation
+    public class DeserializeDocument<T> where T:class, IDeserializeOperation<T>  
     {
         private object _document;
         private static XmlSerializer _serializer;
@@ -28,8 +28,25 @@ namespace NFe.Helpers.Services
       {
         this._document = document;
       }
-     
-      public virtual object Deserialize()
+
+      public virtual bool IsDeserialized()
+      {
+        
+          T obj ;
+
+          try
+          {
+            obj = this.Deserialize();
+
+              return true;
+          }
+          catch 
+          {
+           return false;
+          }
+      }
+
+      public virtual T Deserialize()
       {
           System.IO.StringReader stringReader = null;
           try
@@ -47,10 +64,6 @@ namespace NFe.Helpers.Services
           }
       }
 
-      public virtual T Deserizalize()
-      {
-        return (T)this.Deserialize();
-      }
-
+    
     }
 }

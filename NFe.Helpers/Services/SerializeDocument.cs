@@ -40,6 +40,20 @@ namespace NFe.Helpers.Services
 
       }
 
+    public virtual bool IsSerialized()
+    {
+        string obj;
+        try
+        {
+            obj = this.Serialize();
+            return true;
+        }
+        catch
+        {
+            return false;
+        }
+
+    }
     public virtual string Serialize()
       {
          
@@ -66,5 +80,6 @@ namespace NFe.Helpers.Services
               }
           }
       }
+
   }
 }

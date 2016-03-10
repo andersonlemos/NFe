@@ -12,8 +12,7 @@ namespace NFe.Helpers.Services
 
       private FileInfo fileInfo
       {
-          get { if (_fileInfo == null) 
-              return new FileInfo(_fileName);
+          get { if (_fileInfo == null) return new FileInfo(_fileName);
           return _fileInfo;
           }
       }

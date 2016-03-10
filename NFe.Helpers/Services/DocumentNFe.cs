@@ -3,38 +3,43 @@ using NFe.Helpers.Interfaces;
 
 namespace NFe.Helpers
 {
-    public class DocumentNFe<T> where T : class 
+    public class DocumentNFe<T> where T:class, IDocumentOperation<T>
     {
       private object _document;
   
       public DocumentNFe()
       {
+
       }
 
       public DocumentNFe(object document)
       {
-          this._document = document;
+         this._document = document;
       }
-
 
       public virtual string Serialize()
       {
-          return new SerializeDocument<T>(this._document).Serialize();
+         return new SerializeDocument<T>(this._document).Serialize();
+      }
+      public bool IsDeserialized()
+      {
+        return new DeserializeDocument<T>(this._document).IsDeserialized();
       }
 
+      public bool IsSerialized()
+      {
+        return new SerializeDocument<T>(this._document).IsSerialized();
+      }
       public virtual T Deserialize()
       {
-        T obj= null;
-        return  obj;
-        //return new DeserializeDocument<T>(this._document).Deserizalize();
-
+         return  new DeserializeDocument<T>(this._document).Deserialize();
       }
 
       public virtual void SaveAS(object obj,string fileName)
       {
-        var file = new SaveDocument(obj, fileName);
+         var file = new SaveDocument(obj, fileName);
 
-        file.SaveToFile(new System.Exception("Erro no Salvamento"));
+         file.SaveToFile(new System.Exception("Erro no Salvamento"));
       }
 
       //public static bool LoadFromFile(string fileName, T obj, System.Exception exception)
@@ -87,7 +92,9 @@ namespace NFe.Helpers
       //        }
       //    }
       //}
-      
+
+
+     
     }
 
 }
