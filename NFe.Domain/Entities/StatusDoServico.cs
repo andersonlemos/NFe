@@ -16,6 +16,7 @@ namespace NFe.Domain.Entities
       [XmlElementAttribute("cUF")]
       public string cUF { get; set; }
 
+
       [XmlElementAttribute("xServ")]
       public string xServ { get; set; }
 

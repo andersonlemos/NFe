@@ -27,22 +27,21 @@ namespace NFe.Helpers.Services
         this._fileName = fileName;
       }
 
-      public virtual bool SaveToFile(System.Exception exception)
+      public bool WasSaved()
         {
-            exception = null;
-            try
+           try
             {
                 SaveToFile();
                 return true;
             }
-            catch (System.Exception e)
+            catch 
             {
-                exception = e;
+              
                 return false;
             }
         }
 
-        public virtual void SaveToFile()
+        public void SaveToFile()
         {
            
             _streamWriter = null;

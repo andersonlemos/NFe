@@ -3,7 +3,7 @@ namespace NFe.Helpers.Interfaces
 {
     public interface ISaveOperation
     {
-        bool SaveToFile(System.Exception exception);
+        bool WasSaved();
         void SaveToFile();
     }
 }

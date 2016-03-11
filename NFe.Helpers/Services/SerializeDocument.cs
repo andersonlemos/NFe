@@ -40,7 +40,7 @@ namespace NFe.Helpers.Services
 
       }
 
-    public virtual bool IsSerialized()
+    public bool IsSerialized()
     {
         string obj;
         try
@@ -54,7 +54,7 @@ namespace NFe.Helpers.Services
         }
 
     }
-    public virtual string Serialize()
+    public string Serialize()
       {
          
           try

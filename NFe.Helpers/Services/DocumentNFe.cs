@@ -3,7 +3,7 @@ using NFe.Helpers.Interfaces;
 
 namespace NFe.Helpers
 {
-    public class DocumentNFe<T> where T:class, IDocumentOperation<T>
+    public class DocumentNFe<T>: IDeserializeOperation<T>,ISerializeOperation where T:class
     {
       private object _document;
   
@@ -17,7 +17,7 @@ namespace NFe.Helpers
          this._document = document;
       }
 
-      public virtual string Serialize()
+      public string Serialize()
       {
          return new SerializeDocument<T>(this._document).Serialize();
       }
@@ -30,16 +30,16 @@ namespace NFe.Helpers
       {
         return new SerializeDocument<T>(this._document).IsSerialized();
       }
-      public virtual T Deserialize()
+      public T Deserialize()
       {
-         return  new DeserializeDocument<T>(this._document).Deserialize();
+         return  (T)new DeserializeDocument<T>(this._document).Deserialize();
       }
 
-      public virtual void SaveAS(object obj,string fileName)
+      public void SaveAS(object obj,string fileName)
       {
          var file = new SaveDocument(obj, fileName);
 
-         file.SaveToFile(new System.Exception("Erro no Salvamento"));
+         file.SaveToFile();
       }
 
       //public static bool LoadFromFile(string fileName, T obj, System.Exception exception)
