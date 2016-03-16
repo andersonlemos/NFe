@@ -25,7 +25,7 @@ namespace NFe.Helpers.Test
 
             var _doc = new DeserializeDocument<StatusDoServico>(_fileXML.OuterXml);
 
-          Assert.IsTrue(_doc.IsDeserialized());
+             Assert.IsTrue(_doc.IsDeserialized());
 
 
         }

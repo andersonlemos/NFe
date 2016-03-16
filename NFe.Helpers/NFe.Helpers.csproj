@@ -41,6 +41,7 @@
     <Compile Include="Interfaces\IFileOperation.cs" />
     <Compile Include="Interfaces\ISaveOperation.cs" />
     <Compile Include="Interfaces\ISerializeOperation.cs" />
+    <Compile Include="Services\Certificate.cs" />
     <Compile Include="Services\DeserializeDocument.cs" />
     <Compile Include="Services\DocumentNFe.cs" />
     <Compile Include="Services\Guard.cs" />
