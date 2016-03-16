@@ -28,7 +28,7 @@ namespace NFe.Helpers.Services
        private void CreateStoreLocation(X509Store store)
        {
          _store = store;
-         _store.Open(OpenFlags.OpenExistingOnly);
+         _store.Open(OpenFlags.ReadOnly | OpenFlags.OpenExistingOnly);
        }
 
        private void StoreCertificates(X509Store store)
