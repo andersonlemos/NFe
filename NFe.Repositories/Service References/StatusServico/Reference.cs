@@ -178,5 +178,20 @@ namespace NFe.Repositories.StatusServico {
             inValue.nfeDadosMsg = nfeDadosMsg;
             return ((NFe.Repositories.StatusServico.NfeStatusServico2Soap)(this)).nfeStatusServicoNF2Async(inValue);
         }
+
+
+        public System.Xml.XmlNode nfeStatusServicoNF2(nfeCabecMsg nfeCabecMsg, System.Xml.XmlDocument nfeDadosMsg)
+        {
+            NFe.Repositories.StatusServico.nfeStatusServicoNF2Request inValue = new NFe.Repositories.StatusServico.nfeStatusServicoNF2Request();
+           
+            inValue.nfeCabecMsg = nfeCabecMsg;
+            inValue.nfeDadosMsg = nfeDadosMsg;
+            
+            NFe.Repositories.StatusServico.nfeStatusServicoNF2Response retVal = ((NFe.Repositories.StatusServico.NfeStatusServico2Soap)(this)).nfeStatusServicoNF2(inValue);
+           
+            nfeCabecMsg = retVal.nfeCabecMsg;
+            return retVal.nfeStatusServicoNF2Result;
+
+        }
     }
 }

@@ -45,24 +45,17 @@ namespace NFe.Helpers.Services
        {
            return certificates.Find(X509FindType.FindByKeyUsage, X509KeyUsageFlags.DigitalSignature, false);
        }
-
      
        private void FindCollections()
        {
            _certificatesCollection = CertificatesFindByKeyUsage(CertificatesFindByTimeValid(_certificates));
         }
 
-       public IList<X509Certificate2> GetCollection()
+       public X509Certificate2Collection GetCollection()
        {
-         var certificates = new  List<X509Certificate2>();
-         
-           foreach (var certificate in _certificatesCollection)
-           {
-               certificates.Add(certificate);
-           }
+      
+         return _certificatesCollection;
 
-         return certificates;
-           
        }
 
      }

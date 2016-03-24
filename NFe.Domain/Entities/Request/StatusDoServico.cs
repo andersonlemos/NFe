@@ -3,7 +3,8 @@ using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities
 {
-    [Serializable(), XmlRoot(ElementName = "ConstStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
+
+    [Serializable(), XmlRoot(ElementName = "ConsStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
     public class StatusDoServico
     {
       

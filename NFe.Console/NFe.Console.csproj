@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,6 +60,10 @@
     <ProjectReference Include="..\NFe.Helpers\NFe.Helpers.csproj">
       <Project>{9840841d-c182-42f3-bcfa-be2b6c3fe001}</Project>
       <Name>NFe.Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFe.Repositories\NFe.Repositories.csproj">
+      <Project>{4af8e94f-bc5a-4329-8d08-bd7a7bd24591}</Project>
+      <Name>NFe.Repositories</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

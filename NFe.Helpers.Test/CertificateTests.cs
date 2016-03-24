@@ -6,14 +6,23 @@ namespace NFe.Helpers.Test
     [TestClass]
     public class CertificateTests
     {
-       
-        [TestMethod]
+
+      private Certificate _certificate;
+
+   
+      [TestMethod]
         public void Certificates_NumberOfCertificates()
         {
-          
-          var c = new Certificate();
+            _certificate = new Certificate();
+          Assert.AreEqual(2, _certificate.GetCollection().Count);
 
-          Assert.AreEqual(2, c.GetCollection().Count);
+        }
+
+        [TestMethod]
+        public void Certificates_NameOfCertificate()
+        {
+            _certificate = new Certificate();
+          Assert.IsTrue(_certificate.GetCollection()[1].FriendlyName.Contains("DMO"));
 
         }
     }

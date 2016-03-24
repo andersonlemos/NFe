@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
 using NFe.Helpers.Interfaces;
+using System.Text;
 
 namespace NFe.Helpers.Services
 {
@@ -64,7 +65,7 @@ namespace NFe.Helpers.Services
 
               MemoryStream.Seek(0, System.IO.SeekOrigin.Begin);
 
-              _streamReader = new System.IO.StreamReader(MemoryStream);
+              _streamReader = new System.IO.StreamReader(MemoryStream,Encoding.UTF8);
 
               return _streamReader.ReadToEnd();
           }

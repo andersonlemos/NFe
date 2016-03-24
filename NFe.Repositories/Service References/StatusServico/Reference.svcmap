@@ -22,8 +22,8 @@
     <MetadataSource Address="https://nfe.sefazrs.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="NfeStatusServico2.disco" MetadataType="Disco" ID="481ad8ab-485f-4514-9e29-4caff217df56" SourceId="1" SourceUrl="https://nfe.sefazrs.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx?disco" />
-    <MetadataFile FileName="NfeStatusServico2.wsdl" MetadataType="Wsdl" ID="1d9165a2-a433-441f-843d-d17708b8efd5" SourceId="1" SourceUrl="https://nfe.sefazrs.rs.gov.br/ws/NfeStatusServico/NfeStatusServico2.asmx?wsdl" />
+    <MetadataFile FileName="NfeStatusServico21.wsdl" MetadataType="Wsdl" ID="12d7fcfe-0ca7-4fc2-80f3-74e75b4c0a37" SourceId="1" SourceUrl="https://www.sefazvirtual.fazenda.gov.br/NfeStatusServico2/NfeStatusServico2.asmx?wsdl" />
+    <MetadataFile FileName="NfeStatusServico21.disco" MetadataType="Disco" ID="514a379c-eeb2-472a-9fe5-11beb1a48b6d" SourceId="1" SourceUrl="https://www.sefazvirtual.fazenda.gov.br/NfeStatusServico2/NfeStatusServico2.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

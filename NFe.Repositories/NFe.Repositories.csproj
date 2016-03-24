@@ -70,7 +70,6 @@
     <None Include="Service References\StatusServico\NFe.Repositories.StatusServico.nfeStatusServicoNF2Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\StatusServico\NfeStatusServico2.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Context\" />
@@ -79,19 +78,20 @@
     <WCFMetadataStorage Include="Service References\StatusServico\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\StatusServico\NfeStatusServico2.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\StatusServico\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\StatusServico\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\StatusServico\NfeStatusServico21.wsdl" />
     <None Include="Service References\StatusServico\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\StatusServico\NfeStatusServico21.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
