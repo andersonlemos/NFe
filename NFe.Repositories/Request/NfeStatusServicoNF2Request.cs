@@ -5,7 +5,6 @@ using System.ServiceModel;
 using System.Xml;
 namespace NFe.Repositories.Request
 {
-    [DebuggerStepThroughAttribute()]
     [MessageContractAttribute(IsWrapped = false)]
     public class NFeStatusServicoNF2Request 
     {

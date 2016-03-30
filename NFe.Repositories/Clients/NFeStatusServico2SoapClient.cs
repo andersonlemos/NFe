@@ -15,8 +15,7 @@ using NFe.Repositories.Interfaces;
 
 namespace NFe.Repositories.Clients
 {
-    [DebuggerStepThroughAttribute()]
-    //[GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    
     public class NFeStatusServico2SoapClient :ClientBase<INFeStatusServico2Soap>, INFeStatusServico2Soap
     {
 

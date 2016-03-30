@@ -9,8 +9,6 @@ namespace NFe.Repositories.Entities
 {
    
     [SerializableAttribute()]
-    [DebuggerStepThroughAttribute()]
-    [DesignerCategoryAttribute("code")]
     [XmlTypeAttribute(Namespace = NFeStatusServicoContext.Namespace)]
     public class NFeCabecMsg : object, INotifyPropertyChanged
     {
