@@ -12,39 +12,49 @@ namespace NFe.Helpers.Services
     public class ValidateDocument
     {
 
+      private const string _namespace = "http://www.portalfiscal.inf.br/nfe";
+      
+      private XmlReaderSettings _xmlSettings;
+      private XmlReader _file;
+
+      private string _warnings;
+  
       public ValidateDocument(string schema,string xmlFile)
       {
+          _xmlSettings = new XmlReaderSettings();
 
-          XmlReaderSettings booksSettings = new XmlReaderSettings();
-          booksSettings.Schemas.Add("http://www.portalfiscal.inf.br/nfe", schema);
-          booksSettings.ValidationType = ValidationType.Schema;
-          booksSettings.ValidationEventHandler += new ValidationEventHandler(booksSettingsValidationEventHandler);
+          _xmlSettings.Schemas.Add(_namespace, schema);
+          _xmlSettings.ValidationType = ValidationType.Schema;
+          _xmlSettings.ValidationEventHandler += new ValidationEventHandler(fileValidationEventHandler);
 
-          XmlReader books = XmlReader.Create(xmlFile, booksSettings);
-
-          while (books.Read()) { }
+          _file = XmlReader.Create(xmlFile, _xmlSettings);
+         
+           while (_file.Read()) { }
 
       }
-
-
-
-
-      static void booksSettingsValidationEventHandler(object sender, ValidationEventArgs e)
+      
+      void fileValidationEventHandler(object sender, ValidationEventArgs e)
       {
-          if (e.Severity == XmlSeverityType.Warning)
+          if (e.Severity == XmlSeverityType.Warning || e.Severity == XmlSeverityType.Error)
           {
-              Console.Write("WARNING: ");
-              Console.WriteLine(e.Message);
+            _warnings = _warnings + (e.Message + "-" + e.Severity);
           }
-          else if (e.Severity == XmlSeverityType.Error)
-          {
-              Console.Write("ERROR: ");
-              Console.WriteLine(e.Message);
-          }
+         
       }
 
+      public string Validate()
+      {
+        return _warnings;
+      }
 
+      public bool IsValid()
+      {
+        if (_warnings == string.Empty)
+        {
+          return true;
+        }
+        return false;
 
-
+      }
     }
 }
