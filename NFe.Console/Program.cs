@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NFe.Helpers.Services;
-using System.Security.Cryptography.X509Certificates;
-using NFe.Repositories.StatusServico;
-using System.Xml;
-using NFe.Domain.Entities;
-using NFe.Helpers.Services;
+﻿using NFe.Domain.Entities;
 using NFe.Helpers.Interfaces;
-using System.ServiceModel;
+using NFe.Helpers.Services;
+using NFe.Repositories.Entities;
+using System.Xml;
+
 
 namespace NFe.Console
 {
@@ -19,37 +12,45 @@ namespace NFe.Console
      
         static void Main(string[] args)
         {
-           
-         StatusDoServico statsuDoServico = new StatusDoServico("3.10","2","33","STATUS");
+          const string xsd = @"D:\Repositories\NFe\Documentos\Esquemas\PL_008h2\consStatServ_v3.10.xsd";
+            
+         StatusDoServico statsuDoServico = new StatusDoServico("3.10","1","33","STATUS");
          ISerializeOperation nfe = new SerializeDocument<StatusDoServico>(statsuDoServico);
 
          XmlDocument nfeDadosMsg = new XmlDocument();
-         
+           
+         nfeDadosMsg.PreserveWhitespace = false;
          nfeDadosMsg.LoadXml(nfe.Serialize());
-          nfeDadosMsg.Save(@"d:\xml.xml");
+         
+         nfeDadosMsg.Save(@"d:\xml.xml");
+            
+
          System.Console.WriteLine(nfeDadosMsg.OuterXml);
          System.Console.WriteLine("================================================================");
          System.Console.ReadKey();
 
+         System.Console.WriteLine(new ValidateDocument( xsd,@"d:\xml.xml"));
+         System.Console.WriteLine("================================================================");
+         System.Console.ReadKey();
 
-          nfeCabecMsg nfeCabMsg = new nfeCabecMsg();
+         NFeCabecMsg nfeCabMsg = new NFeCabecMsg();
 
           nfeCabMsg.cUF = "33";
           nfeCabMsg.versaoDados = "3.10";
 
           Certificate cert = new Certificate();
-          NfeStatusServico2SoapClient servico = new NfeStatusServico2SoapClient();
-          nfeStatusServicoNF2Response resp = new nfeStatusServicoNF2Response();
+          NFe.Repositories.Clients.NFeStatusServico2SoapClient service = new Repositories.Clients.NFeStatusServico2SoapClient();
+          NFe.Repositories.Response.NFeStatusServicoNF2Response response = new Repositories.Response.NFeStatusServicoNF2Response();
+          NFe.Repositories.Request.NFeStatusServicoNF2Request request = new Repositories.Request.NFeStatusServicoNF2Request(nfeCabMsg,nfeDadosMsg);
 
-          servico.ClientCredentials.ClientCertificate.Certificate = cert.GetCollection()[1];
+          service.ClientCredentials.ClientCertificate.Certificate = cert.GetCollection()[1];
+          response.nfeStatusServicoNF2Result = service.NFeStatusServicoNF2(request).nfeStatusServicoNF2Result;
+            System.Console.WriteLine(response.nfeStatusServicoNF2Result.OuterXml);
 
-          resp.nfeStatusServicoNF2Result = servico.nfeStatusServicoNF2(nfeCabMsg,nfeDadosMsg);
+           System.Console.ReadKey();
+      
 
-          System.Console.WriteLine(resp.nfeStatusServicoNF2Result.OuterXml);
 
-          System.Console.ReadKey();
-            
-       
         }
 
     }

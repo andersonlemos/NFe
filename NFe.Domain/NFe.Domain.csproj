@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Request\StatusDoServico.cs" />
+    <Compile Include="Entities\Response\RetornoStatusDoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -47,9 +48,30 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities\Response\" />
     <Folder Include="IRepositories\" />
     <Folder Include="ValueObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Schemas\tmp0000.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schemas\xmldsig-core-schema_v1.01.xsd">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schemas\consStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\retConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\tiposBasico_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

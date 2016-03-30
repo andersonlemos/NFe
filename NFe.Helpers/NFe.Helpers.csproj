@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\SaveDocument.cs" />
     <Compile Include="Services\SerializeDocument.cs" />
+    <Compile Include="Services\ValidateDocument.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

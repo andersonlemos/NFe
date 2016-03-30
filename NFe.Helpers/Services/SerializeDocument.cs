@@ -2,6 +2,7 @@
 using System.Xml.Serialization;
 using NFe.Helpers.Interfaces;
 using System.Text;
+using System.Xml;
 
 namespace NFe.Helpers.Services
 {
@@ -11,7 +12,7 @@ namespace NFe.Helpers.Services
     private static XmlSerializer _serializer;
     private static MemoryStream _memoryStream;
     private static StreamReader _streamReader;
-
+    private static XmlTextWriter _writer;
 
     private static MemoryStream MemoryStream
       {
@@ -21,6 +22,15 @@ namespace NFe.Helpers.Services
               return _memoryStream;
           }
       }
+
+    private static XmlTextWriter Writer
+    {
+        get
+        {
+            if ((_writer == null)) _writer = new XmlTextWriter(MemoryStream,UTF8Encoding.UTF8);
+            return _writer;
+        }
+    }
 
     private static XmlSerializer Serializer
       {
@@ -60,14 +70,18 @@ namespace NFe.Helpers.Services
          
           try
           {
-
-              Serializer.Serialize(MemoryStream, this._document);
+            
+           
+              Writer.Formatting = Formatting.None;
+             
+              Serializer.Serialize(Writer, this._document);
 
               MemoryStream.Seek(0, System.IO.SeekOrigin.Begin);
-
-              _streamReader = new System.IO.StreamReader(MemoryStream,Encoding.UTF8);
+             
+              _streamReader = new System.IO.StreamReader(MemoryStream);
 
               return _streamReader.ReadToEnd();
+            
           }
           finally
           {

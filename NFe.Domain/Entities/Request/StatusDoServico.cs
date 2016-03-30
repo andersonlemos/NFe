@@ -3,24 +3,22 @@ using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities
 {
-
-    [Serializable(), XmlRoot(ElementName = "ConsStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
+    [Serializable(), XmlRoot(ElementName = "consStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
     public class StatusDoServico
     {
-      
-      [XmlAttribute(AttributeName="versao")]
+
+      [XmlAttribute(AttributeName = "versao")]
       public string versao { get; set; }
 
-      [XmlElementAttribute("tpAmb")]
+      [XmlElement("tpAmb",Order=1)]
       public string tpAmb { get; set; }
 
-      [XmlElementAttribute("cUF")]
+      [XmlElement("cUF",Order=2)]
       public string cUF { get; set; }
-
-
-      [XmlElementAttribute("xServ")]
+        
+      [XmlElement("xServ",Order=3)]
       public string xServ { get; set; }
-
+        
       public StatusDoServico()
       {
       }
@@ -31,6 +29,7 @@ namespace NFe.Domain.Entities
         this.tpAmb = ambiente;
         this.cUF = uf;
         this.xServ = serv;
+        
       }
         
 
