@@ -49,7 +49,7 @@ namespace NFe.Helpers.Services
 
       public bool IsValid()
       {
-        if (_warnings == string.Empty)
+        if (_warnings == null)
         {
           return true;
         }

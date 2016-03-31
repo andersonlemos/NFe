@@ -1,14 +1,15 @@
-﻿using System;
+﻿using NFe.Domain.Entities.Request;
+using System;
 using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities
 {
     [Serializable(), XmlRoot(ElementName = "consStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public class StatusDoServico
+    public class ConsStatServ:RequestBase
     {
 
-      [XmlAttribute(AttributeName = "versao")]
-      public string versao { get; set; }
+      //[XmlAttribute(AttributeName = "versao")]
+      //public string versao { get; set; }
 
       [XmlElement("tpAmb",Order=1)]
       public string tpAmb { get; set; }
@@ -19,11 +20,11 @@ namespace NFe.Domain.Entities
       [XmlElement("xServ",Order=3)]
       public string xServ { get; set; }
         
-      public StatusDoServico()
+      public ConsStatServ()
       {
       }
-        
-       public StatusDoServico(string versao, string ambiente, string uf, string serv)
+
+      public ConsStatServ(string versao, string ambiente, string uf, string serv)
       {
         this.versao = versao;
         this.tpAmb = ambiente;

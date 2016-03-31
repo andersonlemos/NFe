@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace NFe.Domain.Entities.Response
 {
    [Serializable(), XmlRoot(ElementName = "retConsStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
-   public class RetornoStatusDoServico
+   public class RetConsStatServ
    {
      [XmlAttribute("versao")]
      public string versao { get; set; }
@@ -34,11 +34,11 @@ namespace NFe.Domain.Entities.Response
      [XmlElement("tMed")]
      public string tMed { get; set; }
 
-     public RetornoStatusDoServico()
+     public RetConsStatServ()
       {
       }
 
-     public RetornoStatusDoServico(string versao,string amb,string ver,string verAplic,string codStatus,string motivo,string uf,string dhRecebimento,string tMed)
+     public RetConsStatServ(string versao, string amb, string ver, string verAplic, string codStatus, string motivo, string uf, string dhRecebimento, string tMed)
       {
            this.versao = versao;
            this.tpAmb = amb;

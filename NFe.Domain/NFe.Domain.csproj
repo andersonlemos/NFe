@@ -37,7 +37,10 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Request\StatusDoServico.cs" />
+    <Compile Include="Entities\Request\ConsSitNFe.cs" />
+    <Compile Include="Entities\Request\ConsStatServ.cs" />
+    <Compile Include="Entities\Request\RequestBase.cs" />
+    <Compile Include="Entities\Response\RetConsSitNFe.cs" />
     <Compile Include="Entities\Response\RetornoStatusDoServico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,10 +63,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Schemas\consSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Schemas\consStatServ_v3.10.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Schemas\leiauteConsSitNFe_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\retConsSitNFe_v3.10.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Schemas\retConsStatServ_v3.10.xsd">

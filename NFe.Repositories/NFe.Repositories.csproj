@@ -49,6 +49,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\NfeStatusServicoNF2Request.cs" />
     <Compile Include="Response\NFeStatusServicoNF2Response.cs" />
+    <Compile Include="Service References\ConsultaNFeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NFe.Domain\NFe.Domain.csproj">
@@ -60,7 +65,36 @@
       <Name>NFe.Helpers</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConsultaNFeService\NFe.Repositories.ConsultaNFeService.nfeConsultaNF2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ConsultaNFeService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaNFeService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaNFeService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaNFeService\NfeConsulta21.wsdl" />
+    <None Include="Service References\ConsultaNFeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaNFeService\NfeConsulta21.disco" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
