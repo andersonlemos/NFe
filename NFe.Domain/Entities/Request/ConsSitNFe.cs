@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NFe.Domain.Entities.Base;
+using NFe.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,27 +9,22 @@ using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Request
 {
-    [Serializable(), XmlRoot(ElementName = "consSitNFe", Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public class ConsSitNFe:RequestBase
+   
+    [Serializable(), XmlRoot(ElementName = "consSitNFe", Namespace =NamespaceBase.Domain)]
+    public class ConsSitNFe:ModelBase
     {
 
-        //[XmlAttribute(AttributeName = "versao")]
-        //public string versao { get; set; }
-
-        [XmlElement("tpAmb", Order = 1)]
-        public string tpAmb { get; set; }
-
-        [XmlElement("xServ", Order = 2)]
+        [XmlElement("xServ")]
         public string xServ { get; set; }
 
-        [XmlElement("chNFe", Order = 3)]
+        [XmlElement("chNFe")]
         public string chNFe { get; set; }
 
         public ConsSitNFe()
         {
         }
 
-        public ConsSitNFe(string versao, string ambiente, string serv, string chNFe)
+        public ConsSitNFe(string versao, TAmb ambiente, string serv, string chNFe)
         {
             this.versao = versao;
             this.tpAmb = ambiente;

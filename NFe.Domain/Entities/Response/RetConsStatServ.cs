@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NFe.Domain.Entities.Base;
+using NFe.Domain.Entities.Request;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,15 +9,10 @@ using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Response
 {
-   [Serializable(), XmlRoot(ElementName = "retConsStatServ", Namespace = "http://www.portalfiscal.inf.br/nfe")]
-   public class RetConsStatServ
+   [Serializable(), XmlRoot(ElementName = "retConsStatServ", Namespace = NamespaceBase.Domain)]
+   public class RetConsStatServ:ModelBase
    {
-     [XmlAttribute("versao")]
-     public string versao { get; set; }
-
-     [XmlElement("tpAmb")]
-     public string tpAmb { get; set; }
-     
+    
      [XmlElement("verAplic")]
      public string verAplic { get; set; }
 
@@ -38,7 +35,7 @@ namespace NFe.Domain.Entities.Response
       {
       }
 
-     public RetConsStatServ(string versao, string amb, string ver, string verAplic, string codStatus, string motivo, string uf, string dhRecebimento, string tMed)
+     public RetConsStatServ(string versao, TAmb amb, string ver, string verAplic, string codStatus, string motivo, string uf, string dhRecebimento, string tMed)
       {
            this.versao = versao;
            this.tpAmb = amb;
