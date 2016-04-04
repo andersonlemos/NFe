@@ -37,7 +37,10 @@
     <Reference Include="System.Xml.Serialization" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Base\Enums.cs" />
     <Compile Include="Entities\Base\NamespaceBase.cs" />
+    <Compile Include="Entities\Base\TProtNFe.cs" />
+    <Compile Include="Entities\Base\TProtNFeInfProt.cs" />
     <Compile Include="Entities\Request\ConsSitNFe.cs" />
     <Compile Include="Entities\Request\ConsStatServ.cs" />
     <Compile Include="Entities\Base\ModelBase.cs" />

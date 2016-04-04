@@ -50,11 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Entities\StatusDoServicoTests.cs" />
+    <Compile Include="Entities\ConsStatServTests.cs" />
+    <Compile Include="Entities\RetConsStatServTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ValueObjects\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NFe.Domain\NFe.Domain.csproj">
+      <Project>{3633fdce-913c-4956-af51-d0ce27ab3c02}</Project>
+      <Name>NFe.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
