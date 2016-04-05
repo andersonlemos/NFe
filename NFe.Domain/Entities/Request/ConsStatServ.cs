@@ -11,7 +11,7 @@ namespace NFe.Domain.Entities
 
     
       [XmlElement("cUF")]
-      public TCodUfIBGE cUF { get; set; }
+      public CodUfIBGE cUF { get; set; }
         
       [XmlElement("xServ")]
       public string xServ { get; set; }
@@ -20,7 +20,7 @@ namespace NFe.Domain.Entities
       {
       }
 
-      public ConsStatServ(string versao, Amb ambiente, TCodUfIBGE uf, string serv)
+      public ConsStatServ(string versao, Amb ambiente, CodUfIBGE uf, string serv)
       {
         this.versao = versao;
         this.tpAmb = ambiente;

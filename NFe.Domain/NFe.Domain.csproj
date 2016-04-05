@@ -38,9 +38,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Base\Enums.cs" />
+    <Compile Include="Entities\Base\Evento.cs" />
+    <Compile Include="Entities\Base\EventoInfEvento.cs" />
+    <Compile Include="Entities\Base\EventoInfEventoDetEvento.cs" />
     <Compile Include="Entities\Base\NamespaceBase.cs" />
+    <Compile Include="Entities\Base\ProcEvento.cs" />
     <Compile Include="Entities\Base\ProtNFe.cs" />
     <Compile Include="Entities\Base\ProtNFeInfProt.cs" />
+    <Compile Include="Entities\Base\RetCancNFe.cs" />
     <Compile Include="Entities\Request\ConsSitNFe.cs" />
     <Compile Include="Entities\Request\ConsStatServ.cs" />
     <Compile Include="Entities\Base\ModelBase.cs" />
