@@ -8,10 +8,10 @@ namespace NFe.Domain.Entities.Base
 {
    
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = NamespaceBase.Domain)]
-    public partial class TProtNFeInfProt
+    public partial class ProtNFeInfProt
     {
         [System.Xml.Serialization.XmlElementAttribute("tpAmb")]
-        public TAmb tpAmb { get; set; }
+        public Amb tpAmb { get; set; }
 
         [System.Xml.Serialization.XmlElementAttribute("verAplic")]
         public string verAplic { get; set; }

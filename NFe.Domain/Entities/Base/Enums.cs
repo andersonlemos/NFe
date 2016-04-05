@@ -9,7 +9,7 @@ namespace NFe.Domain.Entities.Base
 {
     [SerializableAttribute()]
     [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    public enum TAmb
+    public enum Amb
     {
 
         /// <remarks/>
@@ -23,7 +23,7 @@ namespace NFe.Domain.Entities.Base
 
     [SerializableAttribute()]
     [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    public enum TCodUfIBGE
+    public enum CodUfIBGE
     {
 
         /// <remarks/>
@@ -146,6 +146,155 @@ namespace NFe.Domain.Entities.Base
         /// <remarks/>
         CPF,
     }
+
+    [SerializableAttribute()]
+    [XmlTypeAttribute(Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
+    public enum ItemChoiceType1
+    {
+
+        /// <remarks/>
+        CNPJDest,
+
+        /// <remarks/>
+        CPFDest,
+    }
+
+    [SerializableAttribute()]
+    [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
+    public enum VerConsSitNFe
+    {
+
+        /// <remarks/>
+        [XmlEnumAttribute("3.10")]
+        Versao_3_10,
+    }
+
+    [SerializableAttribute()]
+    [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
+    public enum COrgaoIBGE
+    {
+
+        /// <remarks/>
+        [XmlEnumAttribute("11")]
+        Item11,
+
+        /// <remarks/>
+        [XmlEnumAttribute("12")]
+        Item12,
+
+        /// <remarks/>
+        [XmlEnumAttribute("13")]
+        Item13,
+
+        /// <remarks/>
+        [XmlEnumAttribute("14")]
+        Item14,
+
+        /// <remarks/>
+        [XmlEnumAttribute("15")]
+        Item15,
+
+        /// <remarks/>
+        [XmlEnumAttribute("16")]
+        Item16,
+
+        /// <remarks/>
+        [XmlEnumAttribute("17")]
+        Item17,
+
+        /// <remarks/>
+        [XmlEnumAttribute("21")]
+        Item21,
+
+        /// <remarks/>
+        [XmlEnumAttribute("22")]
+        Item22,
+
+        /// <remarks/>
+        [XmlEnumAttribute("23")]
+        Item23,
+
+        /// <remarks/>
+        [XmlEnumAttribute("24")]
+        Item24,
+
+        /// <remarks/>
+        [XmlEnumAttribute("25")]
+        Item25,
+
+        /// <remarks/>
+        [XmlEnumAttribute("26")]
+        Item26,
+
+        /// <remarks/>
+        [XmlEnumAttribute("27")]
+        Item27,
+
+        /// <remarks/>
+        [XmlEnumAttribute("28")]
+        Item28,
+
+        /// <remarks/>
+        [XmlEnumAttribute("29")]
+        Item29,
+
+        /// <remarks/>
+        [XmlEnumAttribute("31")]
+        Item31,
+
+        /// <remarks/>
+        [XmlEnumAttribute("32")]
+        Item32,
+
+        /// <remarks/>
+        [XmlEnumAttribute("33")]
+        Item33,
+
+        /// <remarks/>
+        [XmlEnumAttribute("35")]
+        Item35,
+
+        /// <remarks/>
+        [XmlEnumAttribute("41")]
+        Item41,
+
+        /// <remarks/>
+        [XmlEnumAttribute("42")]
+        Item42,
+
+        /// <remarks/>
+        [XmlEnumAttribute("43")]
+        Item43,
+
+        /// <remarks/>
+        [XmlEnumAttribute("50")]
+        Item50,
+
+        /// <remarks/>
+        [XmlEnumAttribute("51")]
+        Item51,
+
+        /// <remarks/>
+        [XmlEnumAttribute("52")]
+        Item52,
+
+        /// <remarks/>
+        [XmlEnumAttribute("53")]
+        Item53,
+
+        /// <remarks/>
+        [XmlEnumAttribute("90")]
+        Item90,
+
+        /// <remarks/>
+        [XmlEnumAttribute("91")]
+        Item91,
+
+        /// <remarks/>
+        [XmlEnumAttribute("92")]
+        Item92,
+    }
+
 
     public abstract class Enums
     {

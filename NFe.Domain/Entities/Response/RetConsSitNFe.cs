@@ -36,7 +36,7 @@ namespace NFe.Domain.Entities.Response
     public partial class TRetConsSitNFe
     {
 
-        private TAmb tpAmbField;
+        private Amb tpAmbField;
 
         private string verAplicField;
 
@@ -44,22 +44,22 @@ namespace NFe.Domain.Entities.Response
 
         private string xMotivoField;
 
-        private TCodUfIBGE cUFField;
+        private CodUfIBGE cUFField;
 
         private string dhRecbtoField;
 
         private string chNFeField;
 
-        private TProtNFe protNFeField;
+        private ProtNFe protNFeField;
 
-        private TRetCancNFe retCancNFeField;
+        private RetCancNFe retCancNFeField;
 
         private TProcEvento[] procEventoNFeField;
 
         private TVerConsSitNFe versaoField;
 
         /// <remarks/>
-        public TAmb tpAmb
+        public Amb tpAmb
         {
             get
             {
@@ -111,7 +111,7 @@ namespace NFe.Domain.Entities.Response
         }
 
         /// <remarks/>
-        public TCodUfIBGE cUF
+        public CodUfIBGE cUF
         {
             get
             {
@@ -150,7 +150,7 @@ namespace NFe.Domain.Entities.Response
         }
 
         /// <remarks/>
-        public TProtNFe protNFe
+        public ProtNFe protNFe
         {
             get
             {
@@ -211,61 +211,7 @@ namespace NFe.Domain.Entities.Response
    
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public partial class TRetCancNFe
-    {
-
-        private TRetCancNFeInfCanc infCancField;
-
-        private SignatureType signatureField;
-
-        private string versaoField;
-
-        /// <remarks/>
-        public TRetCancNFeInfCanc infCanc
-        {
-            get
-            {
-                return this.infCancField;
-            }
-            set
-            {
-                this.infCancField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-        public SignatureType Signature
-        {
-            get
-            {
-                return this.signatureField;
-            }
-            set
-            {
-                this.signatureField = value;
-            }
-        }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string versao
-        {
-            get
-            {
-                return this.versaoField;
-            }
-            set
-            {
-                this.versaoField = value;
-            }
-        }
-    }
+   
 
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
@@ -276,7 +222,7 @@ namespace NFe.Domain.Entities.Response
     public partial class TRetCancNFeInfCanc
     {
 
-        private TAmb tpAmbField;
+        private Amb tpAmbField;
 
         private string verAplicField;
 
@@ -297,7 +243,7 @@ namespace NFe.Domain.Entities.Response
         private string idField;
 
         /// <remarks/>
-        public TAmb tpAmb
+        public Amb tpAmb
         {
             get
             {
@@ -553,7 +499,7 @@ namespace NFe.Domain.Entities.Response
 
         private TCOrgaoIBGE cOrgaoField;
 
-        private TAmb tpAmbField;
+        private Amb tpAmbField;
 
         private string itemField;
 
@@ -587,7 +533,7 @@ namespace NFe.Domain.Entities.Response
         }
 
         /// <remarks/>
-        public TAmb tpAmb
+        public Amb tpAmb
         {
             get
             {
@@ -723,132 +669,7 @@ namespace NFe.Domain.Entities.Response
     }
 
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TCOrgaoIBGE
-    {
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("11")]
-        Item11,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("12")]
-        Item12,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("13")]
-        Item13,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("14")]
-        Item14,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("15")]
-        Item15,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("16")]
-        Item16,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("17")]
-        Item17,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("21")]
-        Item21,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("22")]
-        Item22,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("23")]
-        Item23,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("24")]
-        Item24,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("25")]
-        Item25,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("26")]
-        Item26,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("27")]
-        Item27,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("28")]
-        Item28,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("29")]
-        Item29,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("31")]
-        Item31,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("32")]
-        Item32,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("33")]
-        Item33,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("35")]
-        Item35,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("41")]
-        Item41,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("42")]
-        Item42,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("43")]
-        Item43,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("50")]
-        Item50,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("51")]
-        Item51,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("52")]
-        Item52,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("53")]
-        Item53,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("90")]
-        Item90,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("91")]
-        Item91,
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("92")]
-        Item92,
-    }
+   
 
     
     /// <remarks/>
@@ -959,11 +780,11 @@ namespace NFe.Domain.Entities.Response
     public partial class TRetEventoInfEvento
     {
 
-        private TAmb tpAmbField;
+        private Amb tpAmbField;
 
         private string verAplicField;
 
-        private TCOrgaoIBGE cOrgaoField;
+        private COrgaoIBGE cOrgaoField;
 
         private string cStatField;
 
@@ -990,7 +811,7 @@ namespace NFe.Domain.Entities.Response
         private string idField;
 
         /// <remarks/>
-        public TAmb tpAmb
+        public Amb tpAmb
         {
             get
             {
@@ -1190,30 +1011,5 @@ namespace NFe.Domain.Entities.Response
         }
     }
 
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.portalfiscal.inf.br/nfe", IncludeInSchema = false)]
-    public enum ItemChoiceType1
-    {
-
-        /// <remarks/>
-        CNPJDest,
-
-        /// <remarks/>
-        CPFDest,
-    }
-
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://www.portalfiscal.inf.br/nfe")]
-    public enum TVerConsSitNFe
-    {
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlEnumAttribute("3.10")]
-        Item310,
-    }
-
+  
 }

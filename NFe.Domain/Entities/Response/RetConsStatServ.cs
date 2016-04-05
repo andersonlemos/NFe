@@ -35,7 +35,7 @@ namespace NFe.Domain.Entities.Response
       {
       }
 
-     public RetConsStatServ(string versao, TAmb amb, string ver, string verAplic, string codStatus, string motivo, string uf, string dhRecebimento, string tMed)
+     public RetConsStatServ(string versao, Amb amb, string ver, string verAplic, string codStatus, string motivo, string uf, string dhRecebimento, string tMed)
       {
            this.versao = versao;
            this.tpAmb = amb;

@@ -20,7 +20,7 @@ namespace NFe.Domain.Entities
       {
       }
 
-      public ConsStatServ(string versao, TAmb ambiente, TCodUfIBGE uf, string serv)
+      public ConsStatServ(string versao, Amb ambiente, TCodUfIBGE uf, string serv)
       {
         this.versao = versao;
         this.tpAmb = ambiente;

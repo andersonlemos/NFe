@@ -14,7 +14,7 @@ namespace NFe.Domain.Entities.Base
         public string versao { get; set; }
 
         [XmlElement("tpAmb")]
-        public TAmb tpAmb { get; set; }
+        public Amb tpAmb { get; set; }
 
        
     }

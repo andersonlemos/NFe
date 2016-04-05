@@ -14,11 +14,11 @@ namespace NFe.Domain.Tests.Entities
           var cns = new ConsStatServ();
           
           cns.cUF = TCodUfIBGE.RIO_DE_JANEIRO;
-          cns.tpAmb = TAmb.PRODUCAO;
+          cns.tpAmb = Amb.PRODUCAO;
           cns.versao = "3.10";
           cns.xServ = "STATUS";
 
-          Assert.AreEqual(TAmb.PRODUCAO, cns.tpAmb);
+          Assert.AreEqual(Amb.PRODUCAO, cns.tpAmb);
 
         }
     }

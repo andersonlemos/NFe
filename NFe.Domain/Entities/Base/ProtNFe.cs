@@ -8,10 +8,10 @@ namespace NFe.Domain.Entities.Base
 {
 
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    public partial class TProtNFe
+    public partial class ProtNFe
     {
 
-        public TProtNFeInfProt infProt { get; set; }
+        public ProtNFeInfProt infProt { get; set; }
 
         [System.Xml.Serialization.XmlAttributeAttribute()]
         public string versao { get; set; }

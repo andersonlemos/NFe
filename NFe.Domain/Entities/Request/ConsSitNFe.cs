@@ -24,7 +24,7 @@ namespace NFe.Domain.Entities.Request
         {
         }
 
-        public ConsSitNFe(string versao, TAmb ambiente, string serv, string chNFe)
+        public ConsSitNFe(string versao, Amb ambiente, string serv, string chNFe)
         {
             this.versao = versao;
             this.tpAmb = ambiente;

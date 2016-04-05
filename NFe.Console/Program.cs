@@ -16,7 +16,7 @@ namespace NFe.Console
         static void Main(string[] args)
         {
           const string xsd = @"D:\Repositories\NFe\Documentos\Esquemas\PL_008h2\consStatServ_v3.10.xsd";
-          ConsSitNFe consultaNFe = new ConsSitNFe("3.10",TAmb.PRODUCAO, "CONSULTAR", "33160268643105000100550010000167591000000000");
+          ConsSitNFe consultaNFe = new ConsSitNFe("3.10",Amb.PRODUCAO, "CONSULTAR", "33160268643105000100550010000167591000000000");
           //ConsStatServ statsuDoServico = new ConsStatServ("3.10", TAmb.HOMOLOGACAO, TCodUfIBGE.RIO_DE_JANEIRO, "STATUS");
           //ISerializeOperation nfe = new SerializeDocument<ConsStatServ>(statsuDoServico);
           ISerializeOperation nfe = new SerializeDocument<ConsSitNFe>(consultaNFe);
