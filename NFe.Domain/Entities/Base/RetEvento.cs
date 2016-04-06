@@ -8,7 +8,7 @@ namespace NFe.Domain.Entities.Base
 {
  
     [System.Xml.Serialization.XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    public partial class RetEvento
+    public  class RetEvento
     {
 
         private RetEventoInfEvento infEventoField;
