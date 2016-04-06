@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Base
 {
@@ -33,126 +34,35 @@ namespace NFe.Domain.Entities.Base
 
         private string idField;
 
-        /// <remarks/>
-        public TCOrgaoIBGE cOrgao
-        {
-            get
-            {
-                return this.cOrgaoField;
-            }
-            set
-            {
-                this.cOrgaoField = value;
-            }
-        }
 
-        /// <remarks/>
-        public Amb tpAmb
-        {
-            get
-            {
-                return this.tpAmbField;
-            }
-            set
-            {
-                this.tpAmbField = value;
-            }
-        }
+      public COrgaoIBGE cOrgao { get; set; }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("CNPJ", typeof(string))]
-        [System.Xml.Serialization.XmlElementAttribute("CPF", typeof(string))]
-        [System.Xml.Serialization.XmlChoiceIdentifierAttribute("ItemElementName")]
-        public string Item
-        {
-            get
-            {
-                return this.itemField;
-            }
-            set
-            {
-                this.itemField = value;
-            }
-        }
 
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public ItemChoiceType ItemElementName
-        {
-            get
-            {
-                return this.itemElementNameField;
-            }
-            set
-            {
-                this.itemElementNameField = value;
-            }
-        }
+      public Amb tpAmb { get; set; }
 
-        /// <remarks/>
-        public string chNFe
-        {
-            get
-            {
-                return this.chNFeField;
-            }
-            set
-            {
-                this.chNFeField = value;
-            }
-        }
+      /// <remarks/>
+      [XmlElementAttribute("CNPJ", typeof (string))]
+      [XmlElementAttribute("CPF", typeof (string))]
+      [XmlChoiceIdentifierAttribute("ItemElementName")]
 
-        /// <remarks/>
-        public string dhEvento
-        {
-            get
-            {
-                return this.dhEventoField;
-            }
-            set
-            {
-                this.dhEventoField = value;
-            }
-        }
+      public string Item { get; set; }
 
-        /// <remarks/>
-        public string tpEvento
-        {
-            get
-            {
-                return this.tpEventoField;
-            }
-            set
-            {
-                this.tpEventoField = value;
-            }
-        }
+      /// <remarks/>
+      [XmlIgnoreAttribute()]
+      public ItemChoiceType ItemElementName { get; set; }
 
-        /// <remarks/>
-        public string nSeqEvento
-        {
-            get
-            {
-                return this.nSeqEventoField;
-            }
-            set
-            {
-                this.nSeqEventoField = value;
-            }
-        }
+      public string chNFe { get; set; }
 
-        /// <remarks/>
-        public string verEvento
-        {
-            get
-            {
-                return this.verEventoField;
-            }
-            set
-            {
-                this.verEventoField = value;
-            }
-        }
+      public string dhEvento { get; set; }
+
+
+        public string tpEvento { get; set; }
+
+      public string nSeqEvento { get; set; }
+
+      public string verEvento { get; set; }
+
+        public EventoInfEventoDetEvento detevento { get; set; }
 
         /// <remarks/>
         public TEventoInfEventoDetEvento detEvento

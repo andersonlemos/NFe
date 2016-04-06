@@ -294,8 +294,7 @@ namespace NFe.Domain.Entities.Base
         [XmlEnumAttribute("92")]
         Item92,
     }
-
-
+    
     public abstract class Enums
     {
     }
