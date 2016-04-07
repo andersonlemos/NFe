@@ -1,41 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NFe.Domain.Entities.Base;
+﻿using NFe.Domain.Entities.Base;
 using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Response
 {
 
     [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    [XmlRootAttribute("retConsSitNFe", Namespace = NamespaceBase.Domain, IsNullable = false)]
+    [XmlRoot("retConsSitNFe", Namespace = NamespaceBase.Domain, IsNullable = false)]
     public class RetConsSitNFe
     {
+        [XmlElement("tpAmb")]
         public Amb tpAmb { get; set; }
 
+        [XmlElement("verAplic")]
         public string verAplic { get; set; }
 
+        [XmlElement("cStat")]
         public string cStat { get; set; }
 
+        [XmlElement("xMotivo")]
         public string xMotivo { get; set; }
 
+        [XmlElement("cUF")]
         public CodUfIBGE cUF { get; set; }
 
+        [XmlElement("dhRecbto")]
         public string dhRecbto { get; set; }
-
+        
+        [XmlElement("chNFe")]
         public string chNFe { get; set; }
+
 
         public ProtNFe protNFe { get; set; }
 
         public RetCancNFe retCancNFe { get; set; }
 
-        [XmlElementAttribute("procEventoNFe")]
-        public ProcEvento[] procEventoNFe { get; set; }
+        //[XmlElementAttribute("procEventoNFe")]
+        //public ProcEvento[] procEventoNFe { get; set; }
 
-        [XmlAttributeAttribute()]
-        public VerConsSitNFe versao { get; set; }
+        //[XmlAttributeAttribute()]
+        //public VerConsSitNFe versao { get; set; }
         
     }
 

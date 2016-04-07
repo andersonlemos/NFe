@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Base
 {
 
-    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    [XmlTypeAttribute(AnonymousType = true, Namespace = NamespaceBase.Domain)]
     public class EventoInfEvento
     {
         
@@ -36,7 +31,7 @@ namespace NFe.Domain.Entities.Base
 
         public EventoInfEventoDetEvento detevento { get; set; }
         
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType = "ID")]
+        [XmlAttributeAttribute(DataType = "ID")]
         public string Id { get; set; }
 
     }

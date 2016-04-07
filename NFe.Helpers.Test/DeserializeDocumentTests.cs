@@ -23,7 +23,7 @@ namespace NFe.Helpers.Test
         public void DeserializeDocument_IsDeserialized()
         {
 
-            var _doc = new DeserializeDocument<StatusDoServico>(_fileXML.OuterXml);
+            var _doc = new DeserializeDocument<ConsStatServ>(_fileXML.OuterXml);
 
              Assert.IsTrue(_doc.IsDeserialized());
 
@@ -33,8 +33,8 @@ namespace NFe.Helpers.Test
         public void DeserializeDocument_Deserialized()
         {
 
-            var _doc = new DeserializeDocument<StatusDoServico>(_fileXML.OuterXml);
-            StatusDoServico _nfe = _doc.Deserialize();
+            var _doc = new DeserializeDocument<ConsStatServ>(_fileXML.OuterXml);
+            ConsStatServ _nfe = _doc.Deserialize();
 
           Assert.AreEqual("3.10", _nfe.versao);
 

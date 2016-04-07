@@ -1,5 +1,4 @@
 ﻿using NFe.Domain.Entities.Base;
-using NFe.Domain.Entities.Request;
 using System;
 using System.Xml.Serialization;
 

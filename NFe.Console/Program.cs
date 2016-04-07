@@ -55,12 +55,13 @@ namespace NFe.Console
           var x = new XmlDocument();
           x.LoadXml(response.nfeConsultaNF2Result.OuterXml);
           x.Save(@"d:\resp.xml");
-          var doc = new DeserializeDocument<TRetConsSitNFe>(response.nfeConsultaNF2Result.OuterXml);
-          TRetConsSitNFe ret = doc.Deserialize();
+
+          var doc = new DeserializeDocument<RetConsSitNFe>(response.nfeConsultaNF2Result.OuterXml);
+          RetConsSitNFe ret = doc.Deserialize();
 
           System.Console.WriteLine(response.nfeConsultaNF2Result.OuterXml);
 
-          System.Console.WriteLine(ret.protNFe.infProt.xMotivo);
+          System.Console.WriteLine(ret.protNFe.infProt.verAplic);
 
           System.Console.ReadKey();
 
