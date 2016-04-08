@@ -19,16 +19,22 @@ namespace NFe.Domain.Entities.Base
         [XmlIgnoreAttribute()]
         public ItemChoiceType ItemElementName { get; set; }
 
+        [XmlElementAttribute("chNFe")]
         public string chNFe { get; set; }
 
+        [XmlElementAttribute("dhEvento")]
         public string dhEvento { get; set; }
 
+        [XmlElementAttribute("tpEvento")]
         public string tpEvento { get; set; }
 
+        [XmlElementAttribute("nSeqEvento")]
         public string nSeqEvento { get; set; }
 
+        [XmlElementAttribute("verEvento")]
         public string verEvento { get; set; }
 
+        [XmlElementAttribute("detevento")]
         public EventoInfEventoDetEvento detevento { get; set; }
         
         [XmlAttributeAttribute(DataType = "ID")]

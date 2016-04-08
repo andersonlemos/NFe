@@ -29,16 +29,15 @@ namespace NFe.Domain.Entities.Response
         [XmlElement("chNFe")]
         public string chNFe { get; set; }
 
-
         public ProtNFe protNFe { get; set; }
 
         public RetCancNFe retCancNFe { get; set; }
 
-        //[XmlElementAttribute("procEventoNFe")]
-        //public ProcEvento[] procEventoNFe { get; set; }
+        [XmlElementAttribute("procEventoNFe")]
+        public ProcEvento[] procEventoNFe { get; set; }
 
-        //[XmlAttributeAttribute()]
-        //public VerConsSitNFe versao { get; set; }
+        [XmlAttributeAttribute()]
+        public VerConsSitNFe versao { get; set; }
         
     }
 

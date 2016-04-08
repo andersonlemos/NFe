@@ -7,10 +7,10 @@ namespace NFe.Domain.Entities.Base
     [XmlTypeAttribute(AnonymousType = true, Namespace = NamespaceBase.Domain)]
     public class ProtNFeInfProt
     {
-        [XmlElementAttribute("tpAmb")]
+        [XmlElement("tpAmb")]
         public Amb tpAmb { get; set; }
 
-        [XmlElementAttribute("verAplic")]
+        [XmlElement("verAplic")]
         public string verAplic { get; set; }
 
         [XmlElementAttribute("chNFe")]

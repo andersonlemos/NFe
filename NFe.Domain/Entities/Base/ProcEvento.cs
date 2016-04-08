@@ -7,9 +7,10 @@ namespace NFe.Domain.Entities.Base
     {
 
         public Evento evento { get; set; }
+
         public RetEvento retEvento { get; set; }
 
-        [System.Xml.Serialization.XmlAttributeAttribute()]
+        [XmlAttributeAttribute()]
         public string versao { get; set; }
 
 

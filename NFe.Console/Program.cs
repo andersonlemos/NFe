@@ -57,7 +57,8 @@ namespace NFe.Console
           x.Save(@"d:\resp.xml");
 
           var doc = new DeserializeDocument<RetConsSitNFe>(response.nfeConsultaNF2Result.OuterXml);
-          RetConsSitNFe ret = doc.Deserialize();
+          
+            RetConsSitNFe ret = doc.Deserialize();
 
           System.Console.WriteLine(response.nfeConsultaNF2Result.OuterXml);
 

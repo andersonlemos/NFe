@@ -8,20 +8,27 @@ namespace NFe.Domain.Entities.Base
     {
         public Amb tpAmb { get; set; }
 
+        [XmlElementAttribute("verAplic")]
         public string verAplic { get; set; }
 
         public COrgaoIBGE cOrgao { get; set; }
 
+        [XmlElementAttribute("cStat")]
         public string cStat { get; set; }
 
+        [XmlElementAttribute("xMotivo")]
         public string xMotivo { get; set; }
 
+        [XmlElementAttribute("chNFe")]
         public string chNFe { get; set; }
 
+        [XmlElementAttribute("tpEvento")]
         public string tpEvento { get; set; }
 
+        [XmlElementAttribute("xEvento")]
         public string xEvento { get; set; }
 
+        [XmlElementAttribute("nSeqEvento")]
         public string nSeqEvento { get; set; }
 
         [XmlElementAttribute("CNPJDest", typeof(string))]
@@ -31,11 +38,14 @@ namespace NFe.Domain.Entities.Base
 
         [XmlIgnoreAttribute()]
         public ItemChoiceType1 ItemElementName { get; set; }
-        
+
+        [XmlElementAttribute("emailDest")]
         public string emailDest { get; set; }
 
+        [XmlElementAttribute("dhRegEvento")]
         public string dhRegEvento { get; set; }
 
+        [XmlElementAttribute("nProt")]
         public string nProt { get; set; }
         
         [XmlAttributeAttribute(DataType = "ID")]
