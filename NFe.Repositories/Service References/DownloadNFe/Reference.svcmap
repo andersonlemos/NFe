@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1caecaee-4e53-4d6f-bca6-7256d9fd4af1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8ffda01b-83dc-4683-a1d0-c1a182bad6aa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -7,7 +7,7 @@
     <ExcludedTypes />
     <ImportXmlTypes>false</ImportXmlTypes>
     <GenerateInternalTypes>false</GenerateInternalTypes>
-    <GenerateMessageContracts>true</GenerateMessageContracts>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
     <CollectionMappings />
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://nfe.svrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://www.nfe.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="NfeConsulta21.disco" MetadataType="Disco" ID="e17ef6ac-aea1-4b68-a9c6-e89409b02f4f" SourceId="1" SourceUrl="https://nfe.svrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx?disco" />
-    <MetadataFile FileName="NfeConsulta21.wsdl" MetadataType="Wsdl" ID="e8cbc2b0-91a1-4c86-a604-dc6bbf3e4553" SourceId="1" SourceUrl="https://nfe.svrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx?wsdl" />
+    <MetadataFile FileName="NfeDownloadNF.wsdl" MetadataType="Wsdl" ID="0805b199-0dab-489b-8ae2-ea408a2f0515" SourceId="1" SourceUrl="https://www.nfe.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx?wsdl" />
+    <MetadataFile FileName="NfeDownloadNF.disco" MetadataType="Disco" ID="c557b67e-5766-4824-90b8-9a5af56cca53" SourceId="1" SourceUrl="https://www.nfe.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

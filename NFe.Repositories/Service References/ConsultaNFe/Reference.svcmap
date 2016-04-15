@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ddaa4ee0-9424-451b-9643-f77d23636d90" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2e120d0d-a26d-4a03-92da-fb2c5baee74d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://cad.svrs.rs.gov.br/ws/cadconsultacadastro/cadconsultacadastro2.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://nfe.sefazrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="cadconsultacadastro2.disco" MetadataType="Disco" ID="eb56d2db-d521-498f-af76-6a5e5d642c97" SourceId="1" SourceUrl="https://cad.svrs.rs.gov.br/ws/cadconsultacadastro/cadconsultacadastro2.asmx?disco" />
-    <MetadataFile FileName="cadconsultacadastro2.wsdl" MetadataType="Wsdl" ID="fb6acf41-3996-4db9-bb8e-3dd111a82dc0" SourceId="1" SourceUrl="https://cad.svrs.rs.gov.br/ws/cadconsultacadastro/cadconsultacadastro2.asmx?wsdl" />
+    <MetadataFile FileName="NfeConsulta2.disco" MetadataType="Disco" ID="7183c12d-d32e-44d7-b5e6-e8016bf254b9" SourceId="1" SourceUrl="https://nfe.sefazrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx?disco" />
+    <MetadataFile FileName="NfeConsulta2.wsdl" MetadataType="Wsdl" ID="021d7699-74e8-4265-9b88-95f7750968d1" SourceId="1" SourceUrl="https://nfe.sefazrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

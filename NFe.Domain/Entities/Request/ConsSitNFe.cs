@@ -9,6 +9,9 @@ namespace NFe.Domain.Entities.Request
     public class ConsSitNFe:ModelBase
     {
 
+        [XmlElement("tpAmb")]
+        public Amb tpAmb { get; set; }
+
         [XmlElement("xServ")]
         public string xServ { get; set; }
 

@@ -52,6 +52,7 @@
     <Compile Include="Entities\Request\ConsSitNFe.cs" />
     <Compile Include="Entities\Request\ConsStatServ.cs" />
     <Compile Include="Entities\Base\ModelBase.cs" />
+    <Compile Include="Entities\Request\DownloadNFe.cs" />
     <Compile Include="Entities\Response\RetConsSitNFe.cs" />
     <Compile Include="Entities\Response\RetConsStatServ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +86,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Schemas\leiauteConsStatServ_v3.10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemas\leiauteConsultaCadastro_v2.00.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Schemas\retConsSitNFe_v3.10.xsd">

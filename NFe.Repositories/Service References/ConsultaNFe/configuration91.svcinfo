@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="+y4HYjapi92YNEBUKMLnjaYuqxE=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="O8NAJmzJfaQcaiB/l9CI7gs4veY=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="NfeConsulta2Soap">
       <properties>
@@ -221,10 +221,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="NfeConsulta2Soap" contract="ConsultaNFeService.NfeConsulta2Soap" bindingType="basicHttpBinding" address="https://nfe.svrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx" bindingConfiguration="NfeConsulta2Soap">
+    <endpoint name="NfeConsulta2Soap" contract="ConsultaNFe.NfeConsulta2Soap" bindingType="basicHttpBinding" address="https://nfe.sefazrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx" bindingConfiguration="NfeConsulta2Soap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>https://nfe.svrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx</serializedValue>
+          <serializedValue>https://nfe.sefazrs.rs.gov.br/ws/NfeConsulta/NfeConsulta2.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -236,7 +236,7 @@
           <serializedValue>NfeConsulta2Soap</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ConsultaNFeService.NfeConsulta2Soap</serializedValue>
+          <serializedValue>ConsultaNFe.NfeConsulta2Soap</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

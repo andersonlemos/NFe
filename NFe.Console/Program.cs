@@ -15,76 +15,46 @@ namespace NFe.Console
      
         static void Main(string[] args)
         {
-          const string xsd = @"D:\Repositories\NFe\Documentos\Esquemas\PL_008h2\consStatServ_v3.10.xsd";
-          ConsSitNFe consultaNFe = new ConsSitNFe("3.10",Amb.PRODUCAO, "CONSULTAR", "33160268643105000100550010000167591000000000");
-          //ConsStatServ statsuDoServico = new ConsStatServ("3.10", TAmb.HOMOLOGACAO, TCodUfIBGE.RIO_DE_JANEIRO, "STATUS");
-          //ISerializeOperation nfe = new SerializeDocument<ConsStatServ>(statsuDoServico);
-          ISerializeOperation nfe = new SerializeDocument<ConsSitNFe>(consultaNFe);
-         XmlDocument nfeDadosMsg = new XmlDocument();
-           
-         nfeDadosMsg.PreserveWhitespace = false;
-         nfeDadosMsg.LoadXml(nfe.Serialize());
-         
-         nfeDadosMsg.Save(@"d:\xml.xml");
+            var download = new DownloadNFe();
+
+            download.chNFe = "33160268643105000100550010000167591000000000";
+            download.CNPJ = "68643105000100";
+            download.tpAmb = Amb.PRODUCAO;
+            download.versao = "1.00";
+            download.xServ = "DOWNLOAD NFE";
+
+            var xmlDownload = new XmlDocument();
+
+            var xmlSerialized = new SerializeDocument<DownloadNFe>(download);
             
+            xmlDownload.LoadXml(xmlSerialized.Serialize());
 
-         System.Console.WriteLine(nfeDadosMsg.OuterXml);
-         System.Console.WriteLine("================================================================");
-         System.Console.ReadKey();
+            System.Console.WriteLine(xmlDownload.InnerXml);
 
-         System.Console.WriteLine(new ValidateDocument(xsd,@"d:\xml.xml").Validate());
-         System.Console.WriteLine("================================================================");
-         System.Console.ReadKey();
+            //Repositories.DownloadNFe.NfeDownloadNFSoapClient service = new Repositories.DownloadNFe.NfeDownloadNFSoapClient();
 
-         NFeCabecMsg nfeCabMsg = new NFeCabecMsg();
+            Repositories.Clients.NFeStatusServico2SoapClient service = new Repositories.Clients.NFeStatusServico2SoapClient();
+            Repositories.Context.NFeStatusServicoContext.
 
-          nfeCabMsg.cUF = "33";
-          nfeCabMsg.versaoDados = "3.10";
+            //Repositories.DownloadNFe.nfeCabecMsg cabecalho = new Repositories.DownloadNFe.nfeCabecMsg { cUF = "33", versaoDados = "1.00" };
 
-          Certificate cert = new Certificate();
-          XmlNode node = nfeDadosMsg;
+            //Repositories.DownloadNFe.nfeDownloadNFRequest request = new Repositories.DownloadNFe.nfeDownloadNFRequest(cabecalho, (XmlNode)xmlDownload);
 
-          NFe.Repositories.ConsultaNFeService.NfeConsulta2SoapClient service =
-            new Repositories.ConsultaNFeService.NfeConsulta2SoapClient();
-          NFe.Repositories.ConsultaNFeService.nfeConsultaNF2Response response =
-            new Repositories.ConsultaNFeService.nfeConsultaNF2Response();
-          NFe.Repositories.ConsultaNFeService.nfeConsultaNF2Request request = new Repositories.ConsultaNFeService.nfeConsultaNF2Request(new Repositories.ConsultaNFeService.nfeCabecMsg { cUF = nfeCabMsg.cUF, versaoDados = nfeCabMsg.versaoDados }, node);
-          service.ClientCredentials.ClientCertificate.Certificate = cert.GetCollection()[1];
+            //Repositories.DownloadNFe.nfeDownloadNFResponse response = new Repositories.DownloadNFe.nfeDownloadNFResponse();
 
-          response.nfeConsultaNF2Result = service.nfeConsultaNF2(request).nfeConsultaNF2Result;
-          var x = new XmlDocument();
-          x.LoadXml(response.nfeConsultaNF2Result.OuterXml);
-          x.Save(@"d:\resp.xml");
+            var certificate = new Certificate();
+            
+            service.ClientCredentials.ClientCertificate.Certificate= certificate.GetCollection()[1];
 
-          var doc = new DeserializeDocument<RetConsSitNFe>(response.nfeConsultaNF2Result.OuterXml);
-          
-            RetConsSitNFe ret = doc.Deserialize();
+            response.nfeDownloadNFResult = service.nfeDownloadNF(request.nfeCabecMsg, request.nfeDadosMsg);
 
-          System.Console.WriteLine(response.nfeConsultaNF2Result.OuterXml);
 
-          System.Console.WriteLine(ret.protNFe.infProt.verAplic);
+            System.Console.WriteLine(response.nfeDownloadNFResult.InnerXml);
+            System.Console.ReadKey();
 
-          System.Console.ReadKey();
 
-          //NFe.Repositories.Clients.NFeStatusServico2SoapClient service = new Repositories.Clients.NFeStatusServico2SoapClient();
-          //NFe.Repositories.Response.NFeStatusServicoNF2Response response = new Repositories.Response.NFeStatusServicoNF2Response();
-          //NFe.Repositories.Request.NFeStatusServicoNF2Request request = new Repositories.Request.NFeStatusServicoNF2Request(nfeCabMsg, nfeDadosMsg);
 
-          //service.ClientCredentials.ClientCertificate.Certificate = cert.GetCollection()[1];
 
-          //response.nfeStatusServicoNF2Result = service.NFeStatusServicoNF2(request).nfeStatusServicoNF2Result;
-
-          //System.Console.WriteLine(response.nfeStatusServicoNF2Result.OuterXml);
-
-          //System.Console.ReadKey();
-
-          //var _doc = new DeserializeDocument<RetConsStatServ>(response.nfeStatusServicoNF2Result.OuterXml);
-
-          //RetConsStatServ _nfe = _doc.Deserialize();
-
-          //System.Console.WriteLine(_nfe.xMotivo + " Hora:" + _nfe.dhRecbto);
-
-          //System.Console.ReadKey();
 
         }
 

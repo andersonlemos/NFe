@@ -7,6 +7,8 @@ namespace NFe.Domain.Entities.Response
    [Serializable(), XmlRoot(ElementName = "retConsStatServ", Namespace = NamespaceBase.Domain)]
    public class RetConsStatServ:ModelBase
    {
+     [XmlElement("tpAmb")]
+      public Amb tpAmb { get; set; }
     
      [XmlElement("verAplic")]
      public string verAplic { get; set; }

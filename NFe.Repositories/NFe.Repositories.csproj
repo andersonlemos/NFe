@@ -49,12 +49,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\NfeStatusServicoNF2Request.cs" />
     <Compile Include="Response\NFeStatusServicoNF2Response.cs" />
-    <Compile Include="Service References\ConsultaCadastroNFe\Reference.cs">
+    <Compile Include="Service References\ConsultaNFe\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ConsultaNFeService\Reference.cs">
+    <Compile Include="Service References\DownloadNFe\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -75,51 +75,51 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
-    <None Include="Service References\ConsultaCadastroNFe\cadconsultacadastro2.wsdl" />
-    <None Include="Service References\ConsultaCadastroNFe\NFe.Repositories.ConsultaCadastroNFe.consultaCadastro2Response1.datasource">
+    <None Include="Service References\ConsultaNFe\NFe.Repositories.ConsultaNFe.nfeCabecMsg.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ConsultaCadastroNFe\NFe.Repositories.ConsultaCadastroNFe.nfeCabecMsg1.datasource">
+    <None Include="Service References\ConsultaNFe\NFe.Repositories.ConsultaNFe.nfeConsultaNF2Response.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ConsultaNFeService\NFe.Repositories.ConsultaNFeService.nfeConsultaNF2Response.datasource">
+    <None Include="Service References\ConsultaNFe\NfeConsulta2.wsdl" />
+    <None Include="Service References\DownloadNFe\NFe.Repositories.DownloadNFe.nfeDownloadNFResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\DownloadNFe\NfeDownloadNF.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ConsultaCadastroNFe\" />
-    <WCFMetadataStorage Include="Service References\ConsultaNFeService\" />
+    <WCFMetadataStorage Include="Service References\ConsultaNFe\" />
+    <WCFMetadataStorage Include="Service References\DownloadNFe\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaNFeService\configuration91.svcinfo" />
+    <None Include="Service References\DownloadNFe\NfeDownloadNF.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaNFeService\configuration.svcinfo" />
+    <None Include="Service References\DownloadNFe\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaNFeService\NfeConsulta21.wsdl" />
-    <None Include="Service References\ConsultaNFeService\Reference.svcmap">
+    <None Include="Service References\DownloadNFe\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DownloadNFe\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaNFeService\NfeConsulta21.disco" />
+    <None Include="Service References\ConsultaNFe\NfeConsulta2.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaCadastroNFe\cadconsultacadastro2.disco" />
+    <None Include="Service References\ConsultaNFe\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaCadastroNFe\configuration91.svcinfo" />
+    <None Include="Service References\ConsultaNFe\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaCadastroNFe\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ConsultaCadastroNFe\Reference.svcmap">
+    <None Include="Service References\ConsultaNFe\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

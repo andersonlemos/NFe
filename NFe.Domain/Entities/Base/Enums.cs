@@ -141,6 +141,9 @@ namespace NFe.Domain.Entities.Base
 
         /// <remarks/>
         CPF,
+
+        /// <remarks/>
+        IE
     }
 
     [SerializableAttribute()]
@@ -163,6 +166,12 @@ namespace NFe.Domain.Entities.Base
         /// <remarks/>
         [XmlEnumAttribute("3.10")]
         Versao_3_10,
+
+        [XmlEnumAttribute("2.00")]
+        Versao_2_00,
+
+        [XmlEnumAttribute("1.00")]
+        Versao_1_00
     }
 
     [SerializableAttribute()]

@@ -8,7 +8,10 @@ namespace NFe.Domain.Entities
     public class ConsStatServ:ModelBase
     {
 
-    
+
+      [XmlElement("tpAmb")]
+      public Amb tpAmb { get; set; }  
+
       [XmlElement("cUF")]
       public CodUfIBGE cUF { get; set; }
         

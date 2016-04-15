@@ -13,7 +13,7 @@ namespace NFe.Domain.Tests.Entities
         {
           var cns = new ConsStatServ();
           
-          cns.cUF = TCodUfIBGE.RIO_DE_JANEIRO;
+          
           cns.tpAmb = Amb.PRODUCAO;
           cns.versao = "3.10";
           cns.xServ = "STATUS";

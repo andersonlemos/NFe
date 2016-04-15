@@ -7,9 +7,7 @@ namespace NFe.Domain.Entities.Base
     {
         [XmlAttribute(AttributeName = "versao")]
         public string versao { get; set; }
-
-        [XmlElement("tpAmb")]
-        public Amb tpAmb { get; set; }
+             
 
        
     }
