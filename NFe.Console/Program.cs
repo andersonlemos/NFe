@@ -62,7 +62,7 @@ namespace NFe.Console
             //cabecalho.versao = "1.01";
             //cabecalho.TpAmb = Amb.HOMOLOGACAO;
             //cabecalho.XServ = "CONSULTAR NFE DEST";
-            //cabecalho.Cnpj = "68643105000100";
+            //cabecalho.Cnpj = "";
             //cabecalho.IndNFe = "0";
             //cabecalho.IndEmi = "0";
             //cabecalho.UltNsu = "0";
