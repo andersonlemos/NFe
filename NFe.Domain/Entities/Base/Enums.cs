@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace NFe.Domain.Entities.Base
 {
     [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain)]
     public enum Amb
     {
 
@@ -18,7 +18,7 @@ namespace NFe.Domain.Entities.Base
     }
 
     [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain)]
     public enum CodUfIBGE
     {
 
@@ -132,7 +132,7 @@ namespace NFe.Domain.Entities.Base
     }
 
     [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
     public enum ItemChoiceType
     {
 
@@ -147,7 +147,7 @@ namespace NFe.Domain.Entities.Base
     }
 
     [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
     public enum ItemChoiceType1
     {
 
@@ -159,23 +159,25 @@ namespace NFe.Domain.Entities.Base
     }
 
     [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    public enum VerConsSitNFe
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain)]
+    public enum VersaoNFe
     {
 
-        /// <remarks/>
         [XmlEnumAttribute("3.10")]
         Versao_3_10,
 
         [XmlEnumAttribute("2.00")]
         Versao_2_00,
 
+        [XmlEnumAttribute("1.01")]
+        Versao_1_01,
+
         [XmlEnumAttribute("1.00")]
         Versao_1_00
     }
 
     [SerializableAttribute()]
-    [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain)]
     public enum COrgaoIBGE
     {
 
@@ -298,6 +300,20 @@ namespace NFe.Domain.Entities.Base
         /// <remarks/>
         [XmlEnumAttribute("92")]
         Item92,
+    }
+
+    [System.SerializableAttribute()]
+    [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain)]
+    public enum XServOptions
+    {
+
+        [System.Xml.Serialization.XmlEnumAttribute("CONSULTAR NFE DEST")]
+        CONSULTAR_NFE_DESTINATARIO,
+
+         [System.Xml.Serialization.XmlEnumAttribute("STATUS")]
+        CONSULTAR_STATUS_SERVICO
+
+
     }
     
     public abstract class Enums

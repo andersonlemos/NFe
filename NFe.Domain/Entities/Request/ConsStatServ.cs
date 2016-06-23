@@ -1,6 +1,6 @@
-﻿using NFe.Domain.Entities.Base;
-using System;
+﻿using System;
 using System.Xml.Serialization;
+using NFe.Domain.Entities.Base;
 
 namespace NFe.Domain.Entities
 {
@@ -16,13 +16,13 @@ namespace NFe.Domain.Entities
       public CodUfIBGE cUF { get; set; }
         
       [XmlElement("xServ")]
-      public string xServ { get; set; }
+      public XServOptions xServ { get; set; }
         
       public ConsStatServ()
       {
       }
 
-      public ConsStatServ(string versao, Amb ambiente, CodUfIBGE uf, string serv)
+      public ConsStatServ(VersaoNFe versao, Amb ambiente, CodUfIBGE uf, XServOptions serv)
       {
         this.versao = versao;
         this.tpAmb = ambiente;

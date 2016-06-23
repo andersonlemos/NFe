@@ -49,12 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\NfeStatusServicoNF2Request.cs" />
     <Compile Include="Response\NFeStatusServicoNF2Response.cs" />
-    <Compile Include="Service References\ConsultaNFe\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\DownloadNFe\Reference.cs">
+    <Compile Include="Service References\Repositories\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -75,54 +70,31 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
-    <None Include="Service References\ConsultaNFe\NFe.Repositories.ConsultaNFe.nfeCabecMsg.datasource">
+    <None Include="Service References\Repositories\NFe.Repositories.Repositories.nfeConsultaNFDestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ConsultaNFe\NFe.Repositories.ConsultaNFe.nfeConsultaNF2Response.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ConsultaNFe\NfeConsulta2.wsdl" />
-    <None Include="Service References\DownloadNFe\NFe.Repositories.DownloadNFe.nfeDownloadNFResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\DownloadNFe\NfeDownloadNF.wsdl" />
+    <None Include="Service References\Repositories\NFeConsultaDest1.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ConsultaNFe\" />
-    <WCFMetadataStorage Include="Service References\DownloadNFe\" />
+    <WCFMetadataStorage Include="Service References\Repositories\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DownloadNFe\NfeDownloadNF.disco" />
+    <None Include="Service References\Repositories\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DownloadNFe\configuration91.svcinfo" />
+    <None Include="Service References\Repositories\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\DownloadNFe\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\DownloadNFe\Reference.svcmap">
+    <None Include="Service References\Repositories\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ConsultaNFe\NfeConsulta2.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ConsultaNFe\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ConsultaNFe\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ConsultaNFe\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <None Include="Service References\Repositories\NFeConsultaDest1.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

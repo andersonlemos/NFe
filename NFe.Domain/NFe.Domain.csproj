@@ -49,10 +49,11 @@
     <Compile Include="Entities\Base\RetCancNFeInfCanc.cs" />
     <Compile Include="Entities\Base\RetEvento.cs" />
     <Compile Include="Entities\Base\RetEventoInfEvento.cs" />
+    <Compile Include="Entities\Request\ConsNFeDest.cs" />
     <Compile Include="Entities\Request\ConsSitNFe.cs" />
     <Compile Include="Entities\Request\ConsStatServ.cs" />
     <Compile Include="Entities\Base\ModelBase.cs" />
-    <Compile Include="Entities\Request\DownloadNFe.cs" />
+    <Compile Include="Entities\Response\RetConsNFeDest.cs" />
     <Compile Include="Entities\Response\RetConsSitNFe.cs" />
     <Compile Include="Entities\Response\RetConsStatServ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,22 +77,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Schemas\consSitNFe_v3.10.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Schemas\consStatServ_v3.10.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Schemas\leiauteConsSitNFe_v3.10.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Schemas\leiauteConsStatServ_v3.10.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Schemas\leiauteConsultaCadastro_v2.00.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Schemas\retConsSitNFe_v3.10.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Schemas\retConsStatServ_v3.10.xsd">

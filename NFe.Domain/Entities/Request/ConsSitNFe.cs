@@ -1,6 +1,6 @@
-﻿using NFe.Domain.Entities.Base;
-using System;
+﻿using System;
 using System.Xml.Serialization;
+using NFe.Domain.Entities.Base;
 
 namespace NFe.Domain.Entities.Request
 {
@@ -13,7 +13,7 @@ namespace NFe.Domain.Entities.Request
         public Amb tpAmb { get; set; }
 
         [XmlElement("xServ")]
-        public string xServ { get; set; }
+        public XServOptions xServ { get; set; }
 
         [XmlElement("chNFe")]
         public string chNFe { get; set; }
@@ -22,7 +22,7 @@ namespace NFe.Domain.Entities.Request
         {
         }
 
-        public ConsSitNFe(string versao, Amb ambiente, string serv, string chNFe)
+        public ConsSitNFe(VersaoNFe versao, Amb ambiente, XServOptions serv, string chNFe)
         {
             this.versao = versao;
             this.tpAmb = ambiente;

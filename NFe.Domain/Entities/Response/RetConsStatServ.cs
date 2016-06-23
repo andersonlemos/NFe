@@ -20,7 +20,7 @@ namespace NFe.Domain.Entities.Response
      public string xMotivo { get; set; }
 
      [XmlElement("cUF")]
-     public string cUF { get; set; }
+     public CodUfIBGE cUF { get; set; }
 
      [XmlElement("dhRecbto")]
      public string dhRecbto { get; set; }
@@ -32,11 +32,10 @@ namespace NFe.Domain.Entities.Response
       {
       }
 
-     public RetConsStatServ(string versao, Amb amb, string ver, string verAplic, string codStatus, string motivo, string uf, string dhRecebimento, string tMed)
+     public RetConsStatServ(VersaoNFe versao, Amb amb, string verAplic, string codStatus, string motivo, CodUfIBGE uf, string dhRecebimento, string tMed)
       {
            this.versao = versao;
            this.tpAmb = amb;
-           this.versao = ver;
            this.verAplic = verAplic;
            this.cStat = codStatus;
            this.xMotivo = motivo;

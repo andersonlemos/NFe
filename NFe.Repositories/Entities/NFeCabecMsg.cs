@@ -1,9 +1,9 @@
 ﻿using NFe.Repositories.Context;
 using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Xml;
 using System.Xml.Serialization;
+using NFe.Domain.Entities.Base;
 
 namespace NFe.Repositories.Entities
 {
@@ -12,55 +12,25 @@ namespace NFe.Repositories.Entities
     [XmlTypeAttribute(Namespace = NFeStatusServicoContext.Namespace)]
     public class NFeCabecMsg : object, INotifyPropertyChanged
     {
+        private XmlAttribute[] _anyAttrField;
 
-        private string cUFField;
+        [XmlElementAttribute("cUF",Order = 0)]
+        public CodUfIBGE CUf { get; set; }
 
-        private string versaoDadosField;
-
-        private XmlAttribute[] anyAttrField;
-
-        /// <remarks/>
-        [XmlElementAttribute(Order = 0)]
-        public string cUF
-        {
-            get
-            {
-                return this.cUFField;
-            }
-            set
-            {
-                this.cUFField = value;
-                this.RaisePropertyChanged("cUF");
-            }
-        }
-
-        /// <remarks/>
-        [XmlElementAttribute(Order = 1)]
-        public string versaoDados
-        {
-            get
-            {
-                return this.versaoDadosField;
-            }
-            set
-            {
-                this.versaoDadosField = value;
-                this.RaisePropertyChanged("versaoDados");
-            }
-        }
-
-        /// <remarks/>
+        [XmlElementAttribute("versaoDados",Order = 1)]
+        public VersaoNFe VersaoDados { get; set; }
+    
         [XmlAnyAttributeAttribute()]
         public XmlAttribute[] AnyAttr
         {
             get
             {
-                return this.anyAttrField;
+                return _anyAttrField;
             }
             set
             {
-                this.anyAttrField = value;
-                this.RaisePropertyChanged("AnyAttr");
+                _anyAttrField = value;
+                RaisePropertyChanged("AnyAttr");
             }
         }
 
@@ -68,7 +38,7 @@ namespace NFe.Repositories.Entities
 
         protected void RaisePropertyChanged(string propertyName)
         {
-            PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            var propertyChanged = PropertyChanged;
             if ((propertyChanged != null))
             {
                 propertyChanged(this, new PropertyChangedEventArgs(propertyName));

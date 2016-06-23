@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8ffda01b-83dc-4683-a1d0-c1a182bad6aa" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ecc441c-74a9-4e85-82da-cfe752c53e31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://www.nfe.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://hom.nfe.fazenda.gov.br/NFeConsultaDest/NFeConsultaDest.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="NfeDownloadNF.wsdl" MetadataType="Wsdl" ID="0805b199-0dab-489b-8ae2-ea408a2f0515" SourceId="1" SourceUrl="https://www.nfe.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx?wsdl" />
-    <MetadataFile FileName="NfeDownloadNF.disco" MetadataType="Disco" ID="c557b67e-5766-4824-90b8-9a5af56cca53" SourceId="1" SourceUrl="https://www.nfe.fazenda.gov.br/NfeDownloadNF/NfeDownloadNF.asmx?disco" />
+    <MetadataFile FileName="NFeConsultaDest1.disco" MetadataType="Disco" ID="3add1601-ff4c-48ae-aaeb-a997819fc288" SourceId="1" SourceUrl="https://hom.nfe.fazenda.gov.br/NFeConsultaDest/NFeConsultaDest.asmx?disco" />
+    <MetadataFile FileName="NFeConsultaDest1.wsdl" MetadataType="Wsdl" ID="ae5adaec-4598-4387-a6fc-a8a561bf7ad2" SourceId="1" SourceUrl="https://hom.nfe.fazenda.gov.br/NFeConsultaDest/NFeConsultaDest.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

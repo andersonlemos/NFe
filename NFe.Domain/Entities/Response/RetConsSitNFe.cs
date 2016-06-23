@@ -37,7 +37,7 @@ namespace NFe.Domain.Entities.Response
         public ProcEvento[] procEventoNFe { get; set; }
 
         [XmlAttributeAttribute()]
-        public VerConsSitNFe versao { get; set; }
+        public VersaoNFe versao { get; set; }
         
     }
 

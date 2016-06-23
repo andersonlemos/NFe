@@ -6,7 +6,7 @@ namespace NFe.Domain.Entities.Base
     public abstract class ModelBase
     {
         [XmlAttribute(AttributeName = "versao")]
-        public string versao { get; set; }
+        public VersaoNFe versao { get; set; }
              
 
        
