@@ -8,11 +8,9 @@ namespace NFe.Domain.Entities.Base
     public enum Amb
     {
 
-        /// <remarks/>
         [XmlEnumAttribute("1")]
         PRODUCAO,
 
-        /// <remarks/>
         [XmlEnumAttribute("2")]
         HOMOLOGACAO,
     }
@@ -302,20 +300,65 @@ namespace NFe.Domain.Entities.Base
         Item92,
     }
 
-    [System.SerializableAttribute()]
+    [SerializableAttribute()]
     [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain)]
     public enum XServOptions
     {
 
-        [System.Xml.Serialization.XmlEnumAttribute("CONSULTAR NFE DEST")]
+        [XmlEnumAttribute("CONSULTAR NFE DEST")]
         CONSULTAR_NFE_DESTINATARIO,
 
-         [System.Xml.Serialization.XmlEnumAttribute("STATUS")]
+         [XmlEnumAttribute("STATUS")]
         CONSULTAR_STATUS_SERVICO
 
 
     }
+
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum RetConsNFeDestIndCont
+    {
+
+        [XmlEnum("0")]
+        NAO_POSSUI_MAIS_DOCUMENTOS_PARA_CNPJ,
+
+        [XmlEnum("1")]
+        POSSUI_MAIS_DOCUMENTOS_PARA_CNPJ,
+    }
     
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum RetConsNFeDestRetResCCeTpEvento
+    {
+
+        [XmlEnum("110110")]
+        CODIGO_EVENTO_110110,
+    }
+
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum RetConsNFeDestRetResCCeDescEvento
+    {
+
+        [XmlEnum("Carta de Correção")]
+        CartadeCorreção,
+
+        [XmlEnum("Carta de Correcao")]
+        CartadeCorrecao,
+    }
+
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum RetConsNFeDestRetResCCeTpNF
+    {
+
+        [XmlEnum("0")]
+        ENTRADA,
+
+        [XmlEnum("1")]
+        SAIDA,
+    }
+   
     public abstract class Enums
     {
     }

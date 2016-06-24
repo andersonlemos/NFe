@@ -47,6 +47,9 @@
     <Compile Include="Entities\Base\ProtNFeInfProt.cs" />
     <Compile Include="Entities\Base\RetCancNFe.cs" />
     <Compile Include="Entities\Base\RetCancNFeInfCanc.cs" />
+    <Compile Include="Entities\Base\RetConsNFeDestRet.cs" />
+    <Compile Include="Entities\Base\RetConsNFeDestRetResCanc.cs" />
+    <Compile Include="Entities\Base\RetConsNFeDestRetResCCe.cs" />
     <Compile Include="Entities\Base\RetEvento.cs" />
     <Compile Include="Entities\Base\RetEventoInfEvento.cs" />
     <Compile Include="Entities\Request\ConsNFeDest.cs" />
