@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Base
@@ -131,7 +132,7 @@ namespace NFe.Domain.Entities.Base
 
     [SerializableAttribute()]
     [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
-    public enum ItemChoiceType
+    public enum TipoDeDocumento
     {
 
         /// <remarks/>
@@ -146,14 +147,14 @@ namespace NFe.Domain.Entities.Base
 
     [SerializableAttribute()]
     [XmlTypeAttribute(AnonymousType = true,Namespace = NamespaceBase.Domain, IncludeInSchema = false)]
-    public enum ItemChoiceType1
+    public enum CnpjOuCpfDestinatario
     {
 
         /// <remarks/>
-        CNPJDest,
+        CNPJ_Destinatario,
 
         /// <remarks/>
-        CPFDest,
+        CPF_Destinatario,
     }
 
     [SerializableAttribute()]
@@ -308,7 +309,7 @@ namespace NFe.Domain.Entities.Base
         [XmlEnumAttribute("CONSULTAR NFE DEST")]
         CONSULTAR_NFE_DESTINATARIO,
 
-         [XmlEnumAttribute("STATUS")]
+        [XmlEnumAttribute("STATUS")]
         CONSULTAR_STATUS_SERVICO
 
 
@@ -349,7 +350,7 @@ namespace NFe.Domain.Entities.Base
 
     [SerializableAttribute()]
     [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
-    public enum RetConsNFeDestRetResCCeTpNF
+    public enum TipoDeOperacaoNotaFiscal
     {
 
         [XmlEnum("0")]
@@ -358,7 +359,66 @@ namespace NFe.Domain.Entities.Base
         [XmlEnum("1")]
         SAIDA,
     }
-   
+    
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum SituacaoDaNFe
+    {
+        [XmlEnum("1")]
+        USO_AUTORIZADO_NO_MOMENTO_DA_CONSULTA,
+        [XmlEnum("2")]
+        USO_DENEGADO,
+        /// <remarks/>
+        [XmlEnum("3")]
+        NFe_CANCELADA,
+    }
+
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum SituacaoManifestacaoDestinatario
+    {
+        
+        [XmlEnum("0")]
+        SEM_MANIFESTACAO_DESTINATARIO,
+        
+        [XmlEnum("1")]
+        CONFIRMADA_OPERACAO,
+
+        [XmlEnum("2")]
+        DESCONEHCIDA,
+
+        [XmlEnum("3")]
+        OPERACAO_NAO_REALIZADA,
+
+        [XmlEnum("4")]
+        CIENCIA,
+    }
+
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum IndicadorDeNFeConsultada
+    {
+        [XmlEnum("0")]
+        TODAS,
+
+        [XmlEnum("1")]
+        SEM_MANIFESTACAO,
+
+        [XmlEnum("2")]
+        SEM_MANIFESTACAO_E_CIENCIA_DA_EMISSAO
+    }
+
+    [SerializableAttribute()]
+    [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
+    public enum IndicadorDoEmissorNFe
+    {
+        [XmlEnum("0")]
+        TODOS_EMITENTES_REMETENTES,
+
+        [XmlEnum("1")]
+        EMISSORES_REMETENTES_SEM_MESMO_NPJ_BASE
+
+    }
     public abstract class Enums
     {
     }

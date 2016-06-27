@@ -37,7 +37,7 @@ namespace NFe.Domain.Entities.Base
         public string Item { get; set; }
 
         [XmlIgnoreAttribute()]
-        public ItemChoiceType1 ItemElementName { get; set; }
+        public TipoDeDocumento ItemElementName { get; set; }
 
         [XmlElementAttribute("emailDest")]
         public string emailDest { get; set; }

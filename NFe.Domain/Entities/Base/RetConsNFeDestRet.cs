@@ -1,5 +1,4 @@
 ﻿using System.Xml.Serialization;
-using NFe.Domain.Entities.Response;
 
 namespace NFe.Domain.Entities.Base
 {
@@ -9,7 +8,7 @@ namespace NFe.Domain.Entities.Base
 
         [XmlElementAttribute("resCCe", typeof(RetConsNFeDestRetResCCe))]
         [XmlElementAttribute("resCanc", typeof(RetConsNFeDestRetResCanc))]
-        [XmlElementAttribute("resNFe", typeof(TRetConsNFeDestRetResNFe))]
+        [XmlElementAttribute("resNFe", typeof(RetConsNFeDestRetResNFe))]
         public object Item { get; set; }
         
     }

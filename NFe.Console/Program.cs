@@ -1,4 +1,6 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Contexts;
 using NFe.Domain.Entities;
 using NFe.Domain.Entities.Base;
@@ -23,7 +25,7 @@ namespace NFe.Console
         {
 
             //var cabecalho = new Domain.Entities.ConsStatServ();
-            //cabecalho.cUF = CodUfIBGE.RIO_DE_JANEIRO;
+           // cabecalho.cUF = CodUfIBGE.RIO_DE_JANEIRO;
             //cabecalho.tpAmb = Amb.HOMOLOGACAO;
             //cabecalho.versao = VersaoNFe.Versao_3_10;
             //cabecalho.xServ = XServOptions.CONSULTAR_STATUS_SERVICO;
@@ -56,9 +58,12 @@ namespace NFe.Console
             //System.Console.ReadKey();
 
 
+            var stopwatch = new Stopwatch();
 
+            stopwatch.Start();
             var cabecalho = new Domain.Entities.Request.ConsNFeDest();
-
+        
+            cabecalho.versao =VersaoNFe.Versao_1_01;
             
 
 
@@ -74,17 +79,22 @@ namespace NFe.Console
             var req = new Repositories.Repositories.nfeConsultaNFDestRequest(new nfeCabecMsg() { cUF = "33", versaoDados = "1.01" }, xml);
             var res = new Repositories.Repositories.nfeConsultaNFDestResponse();
 
+            
             service.ClientCredentials.ClientCertificate.Certificate = new Certificate().GetCollection()[1];
             res.nfeConsultaNFDestResult = service.nfeConsultaNFDest(req.nfeCabecMsg, (XmlDocument)req.nfeDadosMsg);
 
             var des = new DeserializeDocument<RetConsNFeDest>(res.nfeConsultaNFDestResult.OuterXml);
-            RetConsNFeDest dest = des.Deserialize();
 
+            RetConsNFeDest dest = des.Deserialize();
+            
+            
+      
             System.Console.WriteLine(res.nfeConsultaNFDestResult.OuterXml);
+            stopwatch.Stop();
+            System.Console.WriteLine("Tempo passado em Milisegundos: " + stopwatch.ElapsedMilliseconds );
             
-            System.Console.WriteLine(dest.xMotivo);
-            
-            
+            System.Console.WriteLine();
+
             System.Console.ReadKey();
 
         }

@@ -29,7 +29,7 @@ namespace NFe.Domain.Entities.Base
         public string xCorrecao { get; set; }
 
         [XmlElement("tpNF")]
-        public RetConsNFeDestRetResCCeTpNF tpNF { get; set; }
+        public TipoDeOperacaoNotaFiscal tpNF { get; set; }
 
         [XmlElement("dhRecbto")]
         public DateTime dhRecbto { get; set; }

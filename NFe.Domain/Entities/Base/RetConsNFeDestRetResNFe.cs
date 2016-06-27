@@ -3,10 +3,10 @@ using System.Xml.Serialization;
 
 namespace NFe.Domain.Entities.Base
 {
+   
     [XmlType(AnonymousType = true, Namespace = NamespaceBase.Domain)]
-    public class RetConsNFeDestRetResCanc
+    public class RetConsNFeDestRetResNFe
     {
-
         [XmlElement("chNFe")]
         public string chNFe { get; set; }
 
@@ -50,4 +50,3 @@ namespace NFe.Domain.Entities.Base
 
     }
 }
-

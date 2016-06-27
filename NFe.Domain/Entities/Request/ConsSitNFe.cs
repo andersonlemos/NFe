@@ -13,7 +13,7 @@ namespace NFe.Domain.Entities.Request
         public Amb tpAmb { get; set; }
 
         [XmlElement("xServ")]
-        public XServOptions xServ { get; set; }
+        public string xServ { get; set; }
 
         [XmlElement("chNFe")]
         public string chNFe { get; set; }
@@ -22,7 +22,7 @@ namespace NFe.Domain.Entities.Request
         {
         }
 
-        public ConsSitNFe(VersaoNFe versao, Amb ambiente, XServOptions serv, string chNFe)
+        public ConsSitNFe(VersaoNFe versao, Amb ambiente, string serv, string chNFe)
         {
             this.versao = versao;
             this.tpAmb = ambiente;

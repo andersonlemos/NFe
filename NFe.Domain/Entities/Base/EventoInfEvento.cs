@@ -17,7 +17,7 @@ namespace NFe.Domain.Entities.Base
         public string Item { get; set; }
         
         [XmlIgnoreAttribute()]
-        public ItemChoiceType ItemElementName { get; set; }
+        public TipoDeDocumento ItemElementName { get; set; }
 
         [XmlElementAttribute("chNFe")]
         public string chNFe { get; set; }
