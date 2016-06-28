@@ -7,9 +7,9 @@ namespace NFe.Domain.Entities.Base
     public class RetEvento
     {
 
-        public TRetEventoInfEvento infEvento { get; set; }
+        public RetEventoInfEvento infEvento { get; set; }
 
-        [XmlAttributeAttribute()]
+        [XmlAttributeAttribute("versao")]
         public string versao { get; set; }
 
     }

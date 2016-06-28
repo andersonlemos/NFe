@@ -3,7 +3,7 @@
 namespace NFe.Domain.Entities.Base
 {
     [XmlTypeAttribute(Namespace = NamespaceBase.Domain)]
-    public partial class ProcEvento
+    public class ProcEvento
     {
 
         public Evento evento { get; set; }

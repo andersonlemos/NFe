@@ -4,13 +4,15 @@ namespace NFe.Domain.Entities.Base
 {
 
     [XmlTypeAttribute(AnonymousType = true, Namespace = NamespaceBase.Domain)]
-    public partial class TRetEventoInfEvento
+    public class RetEventoInfEvento
     {
+        [XmlElementAttribute("tpAmb")]
         public Amb tpAmb { get; set; }
 
         [XmlElementAttribute("verAplic")]
         public string verAplic { get; set; }
 
+        [XmlElementAttribute("cOrgao")]
         public COrgaoIBGE cOrgao { get; set; }
 
         [XmlElementAttribute("cStat")]
@@ -37,7 +39,7 @@ namespace NFe.Domain.Entities.Base
         public string Item { get; set; }
 
         [XmlIgnoreAttribute()]
-        public TipoDeDocumento ItemElementName { get; set; }
+        public CnpjOuCpfDestinatario ItemElementName { get; set; }
 
         [XmlElementAttribute("emailDest")]
         public string emailDest { get; set; }

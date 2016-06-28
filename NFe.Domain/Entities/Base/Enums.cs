@@ -151,10 +151,10 @@ namespace NFe.Domain.Entities.Base
     {
 
         /// <remarks/>
-        CNPJ_Destinatario,
+        CNPJDest,
 
         /// <remarks/>
-        CPF_Destinatario,
+        CPFDest,
     }
 
     [SerializableAttribute()]
@@ -310,7 +310,10 @@ namespace NFe.Domain.Entities.Base
         CONSULTAR_NFE_DESTINATARIO,
 
         [XmlEnumAttribute("STATUS")]
-        CONSULTAR_STATUS_SERVICO
+        CONSULTAR_STATUS_SERVICO,
+
+        [XmlEnumAttribute("CONSULTAR")]
+        CONSULTAR
 
 
     }

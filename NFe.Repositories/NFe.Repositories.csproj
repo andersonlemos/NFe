@@ -49,6 +49,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\NfeStatusServicoNF2Request.cs" />
     <Compile Include="Response\NFeStatusServicoNF2Response.cs" />
+    <Compile Include="Service References\ConsultaProtocolo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\Repositories\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +75,13 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="Service References\ConsultaProtocolo\NFe.Repositories.ConsultaProtocolo.nfeCabecMsg.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ConsultaProtocolo\NFe.Repositories.ConsultaProtocolo.nfeConsultaNF2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ConsultaProtocolo\NfeConsulta2.wsdl" />
     <None Include="Service References\Repositories\NFe.Repositories.Repositories.nfeConsultaNFDestResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -79,6 +91,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ConsultaProtocolo\" />
     <WCFMetadataStorage Include="Service References\Repositories\" />
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +108,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\Repositories\NFeConsultaDest1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaProtocolo\NfeConsulta2.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaProtocolo\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaProtocolo\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConsultaProtocolo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
