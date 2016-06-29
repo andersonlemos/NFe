@@ -23,6 +23,7 @@ namespace NFe.Repositories.Request
             this.nfeCabecMsg = nfeCabecMsg;
             this.nfeDadosMsg = nfeDadosMsg;
         }
+
         public NFeStatusServicoNF2Request(NFeCabecMsg nfeCabecMsg, XmlDocument nfeDadosMsg)
         {
             this.nfeCabecMsg = nfeCabecMsg;

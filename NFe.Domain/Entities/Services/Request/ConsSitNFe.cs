@@ -2,7 +2,7 @@
 using System.Xml.Serialization;
 using NFe.Domain.Entities.Base;
 
-namespace NFe.Domain.Entities.Request
+namespace NFe.Domain.Entities.Services.Request
 {
    
     [Serializable(), XmlRoot(ElementName = "consSitNFe", Namespace =NamespaceBase.Domain)]
@@ -22,11 +22,11 @@ namespace NFe.Domain.Entities.Request
         {
         }
 
-        public ConsSitNFe(VersaoNFe versao, Amb ambiente, XServOptions serv, string chNFe)
+        public ConsSitNFe(VersaoNFe versao, Amb tpAmb, XServOptions xServ, string chNFe)
         {
             this.versao = versao;
-            this.tpAmb = ambiente;
-            this.xServ = serv;
+            this.tpAmb = tpAmb;
+            this.xServ = xServ;
             this.chNFe = chNFe;
         }
 

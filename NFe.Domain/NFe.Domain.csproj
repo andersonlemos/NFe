@@ -53,13 +53,16 @@
     <Compile Include="Entities\Base\RetConsNFeDestRetResNFe.cs" />
     <Compile Include="Entities\Base\RetEvento.cs" />
     <Compile Include="Entities\Base\RetEventoInfEvento.cs" />
-    <Compile Include="Entities\Request\ConsNFeDest.cs" />
-    <Compile Include="Entities\Request\ConsSitNFe.cs" />
-    <Compile Include="Entities\Request\ConsStatServ.cs" />
+    <Compile Include="Entities\NFeDoc\InfNFe.cs" />
+    <Compile Include="Entities\NFeDoc\NFe.cs" />
+    <Compile Include="Entities\NFeDoc\NFeProc.cs" />
+    <Compile Include="Entities\Services\Request\ConsNFeDest.cs" />
+    <Compile Include="Entities\Services\Request\ConsSitNFe.cs" />
+    <Compile Include="Entities\Services\Request\ConsStatServ.cs" />
     <Compile Include="Entities\Base\ModelBase.cs" />
-    <Compile Include="Entities\Response\RetConsNFeDest.cs" />
-    <Compile Include="Entities\Response\RetConsSitNFe.cs" />
-    <Compile Include="Entities\Response\RetConsStatServ.cs" />
+    <Compile Include="Entities\Services\Response\RetConsNFeDest.cs" />
+    <Compile Include="Entities\Services\Response\RetConsSitNFe.cs" />
+    <Compile Include="Entities\Services\Response\RetConsStatServ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

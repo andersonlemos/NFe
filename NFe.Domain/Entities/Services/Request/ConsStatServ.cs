@@ -22,12 +22,12 @@ namespace NFe.Domain.Entities
       {
       }
 
-      public ConsStatServ(VersaoNFe versao, Amb ambiente, CodUfIBGE uf, XServOptions serv)
+      public ConsStatServ(VersaoNFe versao, Amb tpAmb, CodUfIBGE cUF, XServOptions xServ)
       {
         this.versao = versao;
-        this.tpAmb = ambiente;
-        this.cUF = uf;
-        this.xServ = serv;
+        this.tpAmb = tpAmb;
+        this.cUF = cUF;
+        this.xServ = xServ;
         
       }
         
