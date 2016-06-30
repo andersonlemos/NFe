@@ -30,23 +30,7 @@ namespace NFe.Console
         static void Main(string[] args)
         {
 
-            var xml = new XmlDocument();
-
-            xml.Load("d:/nota01.xml");
-
            
-
-            var arquivo = new DeserializeDocument<NFeProc>(xml.OuterXml);
-            NFeProc nfe = arquivo.Deserialize();
-
-            byte[] dBytes = nfe.Nfe.signature.SignedInfo.Reference.DigestValue;
-            string s3 = Convert.ToBase64String(nfe.Nfe.signature.SignedInfo.Reference.DigestValue);  // gsjqFw==
-            
-            
-            //System.Console.WriteLine(nfe.Nfe);
-            System.Console.WriteLine(nfe.Nfe.signature.SignedInfo.Reference.URI);
-            System.Console.WriteLine(s3);
-            System.Console.ReadKey();
 
         }
 
